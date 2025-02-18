@@ -1,0 +1,7 @@
+baseURL = 'https://playbook.think.ke/'
+languageCode = 'en-us'
+title = 'THiNK Playbook'
+
+[module]
+[[module.imports]]
+  path = "github.com/thuliteio/doks"
