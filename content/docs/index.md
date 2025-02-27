@@ -9,7 +9,7 @@ To foster innovation and collaboration among technology professionals through kn
 - Monthly tech talks
 - Quarterly hackathons
 - Networking sessions
-- Workshops and training
+- Workshops and training..
 
 ### Mentorship Program
 - One-on-one guidance
