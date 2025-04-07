@@ -1,3 +1,14 @@
+---
+title: "Documentation"
+description: "THiNK Playbook Documentation"
+lead: "Learn about our processes, guidelines, and best practices"
+date: 2023-09-07T16:33:54+02:00
+lastmod: 2024-02-27T09:30:56+01:00
+draft: false
+images: []
+weight: 1
+---
+
 # Tech Innovators Network (THiNK)
 
 ## Our Mission
@@ -33,7 +44,3 @@ To foster innovation and collaboration among technology professionals through kn
 Email: info@thinkinnovators.org
 Twitter: @TechInnovNet
 LinkedIn: Tech Innovators Network
-
----
-*Empowering the next generation of technology leaders*
-        

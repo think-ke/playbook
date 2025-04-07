@@ -1,3 +1,13 @@
+---
+title: "Tech Innovators Network Playbook"
+description: "Central resource for THiNK guidelines, values, and strategic initiatives"
+lead: "Welcome to the Tech Innovators Network (THiNK) Playbook"
+date: 2023-09-07T16:33:54+02:00
+lastmod: 2024-02-27T09:30:56+01:00
+draft: false
+images: []
+---
+
 # Tech Innovators Network (THiNK)
 
 ## Our Mission
@@ -9,7 +19,7 @@ To foster innovation and collaboration among technology professionals through kn
 - Monthly tech talks
 - Quarterly hackathons
 - Networking sessions
-- Workshops and training..
+- Workshops and training
 
 ### Mentorship Program
 - One-on-one guidance
@@ -33,7 +43,3 @@ To foster innovation and collaboration among technology professionals through kn
 Email: info@thinkinnovators.org
 Twitter: @TechInnovNet
 LinkedIn: Tech Innovators Network
-
----
-*Empowering the next generation of technology leaders*
-        

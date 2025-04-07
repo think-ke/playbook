@@ -1,0 +1,14 @@
+# Base configuration for all environments
+title = "THiNK Playbook"
+enableGitInfo = true
+
+[params]
+  description = "Technical documentation and guidelines for the Tech Innovators Network"
+  docsVersioning = false
+  
+[build]
+  writeStats = true
+
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
