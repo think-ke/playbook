@@ -1,0 +1,96 @@
+{{ define "main" }}
+<div class="hero">
+  <div class="hero-background"></div>
+  <div class="hero-content">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.lead | default .Params.description }}</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="/docs/" role="button">Get Started</a>
+      <a class="btn btn-outline" href="{{ .Site.Params.github_repo }}" role="button">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="content container">
+  {{ .Content }}
+</div>
+
+<div class="featured-section">
+  <div class="container">
+    <h2 class="section-title">Key Resources</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">📘</div>
+        <h3>Style Guide</h3>
+        <p>Best practices for code quality, formatting, and organization across all projects.</p>
+        <a href="/docs/style-guide/" class="btn btn-sm">Learn More</a>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">🧭</div>
+        <h3>Onboarding</h3>
+        <p>Get started with our comprehensive onboarding process for new team members.</p>
+        <a href="/docs/onboarding/" class="btn btn-sm">Learn More</a>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">🛠️</div>
+        <h3>Products</h3>
+        <p>Explore our product lineup and learn about our technology innovations.</p>
+        <a href="/docs/products/" class="btn btn-sm">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="quick-links-section">
+  <div class="container">
+    <div class="two-column-layout">
+      <div class="quick-links-container">
+        <div class="sidebar">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/docs/style-guide/">Style Guide</a></li>
+            <li><a href="/docs/values/">Company Values</a></li>
+            <li><a href="/docs/company/">About Our Company</a></li>
+            <li><a href="/docs/onboarding/">Onboarding Guide</a></li>
+            <li><a href="/docs/products/">Our Products</a></li>
+            <li><a href="/docs/culture/">Team Culture</a></li>
+            <li><a href="/docs/organization/">Company Structure</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="welcome-message">
+        <h3>Welcome to Our Playbook</h3>
+        <p>This playbook serves as a comprehensive guide to our organization's best practices, culture, and processes. Whether you're a new team member or a seasoned veteran, you'll find valuable resources to help you succeed.</p>
+        <p>Explore our documentation to learn more about how we work together to build great products.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="community-section">
+  <div class="container">
+    <h2 class="section-title">Community & Growth</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <div class="feature-icon">🎪</div>
+        <h3>Events & Meetups</h3>
+        <p>Monthly tech talks, quarterly hackathons, networking sessions, and training opportunities for professional growth.</p>
+      </div>
+      
+      <div class="card">
+        <div class="feature-icon">👥</div>
+        <h3>Mentorship Program</h3>
+        <p>One-on-one guidance, career development, technical skill enhancement, and leadership training to foster growth.</p>
+      </div>
+      
+      <div class="card">
+        <div class="feature-icon">🌟</div>
+        <h3>Community Projects</h3>
+        <p>Open source contributions, social impact initiatives, education outreach, and innovation challenges that make a difference.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

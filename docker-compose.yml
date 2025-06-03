@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  playbook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # Optional volume for development purposes (uncomment if needed)
+    # volumes:
+    #   - ./public:/usr/share/nginx/html

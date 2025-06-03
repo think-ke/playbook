@@ -1,0 +1,132 @@
+<div class="docs-sidebar">
+  <h3>Documentation</h3>
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-item"><a href="/docs/" class="sidebar-link">📚 Overview</a></li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">📐</span>
+        <strong>Style Guide</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/style-guide/" class="sidebar-link">Introduction</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/version-control/" class="sidebar-link">Version Control</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/code-review/" class="sidebar-link">Code Review</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/pull-requests/" class="sidebar-link">Pull Requests</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">💎</span>
+        <strong>Values</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/values/" class="sidebar-link">Company Values</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">🏢</span>
+        <strong>Organization</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/organization/" class="sidebar-link">Structure</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">📝</span>
+        <strong>SOPs</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/sops/" class="sidebar-link">Standard Procedures</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">🏭</span>
+        <strong>Company</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/company/" class="sidebar-link">About Us</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">🛠️</span>
+        <strong>Products</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/products/" class="sidebar-link">Our Products</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">🧠</span>
+        <strong>Culture</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/culture/" class="sidebar-link">Our Culture</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">👋</span>
+        <strong>Onboarding</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/onboarding/" class="sidebar-link">Getting Started</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">👥</span>
+        <strong>Human Resources</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/hr/" class="sidebar-link">HR Policies</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">💻</span>
+        <strong>IT</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/it/" class="sidebar-link">IT Resources</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">🚨</span>
+        <strong>Crisis Management</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/crisis/" class="sidebar-link">Crisis Procedures</a></li>
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="sidebar-footer">
+    {{ if .File }}
+    <a href="{{ .Site.Params.github_repo }}/edit/main/content/{{ .File.Path }}" class="edit-link">
+      ✏️ Edit this page
+    </a>
+    {{ else }}
+    <a href="{{ .Site.Params.github_repo }}" class="edit-link">
+      📖 View Documentation
+    </a>
+    {{ end }}
+  </div>
+</div>

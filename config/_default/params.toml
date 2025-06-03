@@ -1,0 +1,58 @@
+# Doks (@thulite/doks) theme params
+description = "Technical documentation and guidelines for the Tech Innovators Network"
+author = "THiNK Team"
+github_repo = "https://github.com/think-ke/playbook"
+
+# Footer
+[footer]
+copyright = "Copyright (c) 2024 Tech Innovators Network (THiNK)"
+
+# SEO
+[seo]
+  title_separator = " | "
+  twitter_site = "@TechInnovNet"
+  twitter_creator = "@TechInnovNet"
+  facebook_admin = ""
+  facebook_publisher = ""
+  facebook_app_id = ""
+
+# Doks specific
+[doks]
+  # Versioning
+  docsVersioning = false
+  docsVersion = "1.0"
+
+  # Edit page
+  editPage = false
+  docsRepo = "https://github.com/think-ke/playbook"
+  docsRepoBranch = "main"
+  docsRepoSubPath = ""
+
+  # Options
+  collapsibleSidebar = true
+  ToC = true
+  SCSS = true
+  fullWidth = false
+  sectionNav = ["docs"]
+  showDate = false
+  showLastMod = false
+  showEdit = false
+  repoHost = "GitHub"
+  docsLayout = "docs"
+  script = ""
+
+# Alert
+[alert]
+  enable = false
+  script = ""
+
+# Images (@thulite/images)
+[thulite_images]
+  [thulite_images.defaults]
+    decoding_default = "async" # sync, async, or auto (default)
+    fetchpriority_default = "auto" # high, low, or auto (default)
+    loading_default = "lazy" # eager or lazy (default)
+    widths = [480, 576, 768, 1025, 1200, 1440] # [640, 768, 1024, 1366, 1600, 1920] for example
+    sizes = "auto" # 100vw (default), 75vw, or auto for example
+    process = "" # "fill 1600x900" or "fit 1600x900" for example
+    lqip = "16x webp q20" # "16x webp q20" or "21x webp q20 grayscale" for example

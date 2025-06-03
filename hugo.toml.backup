@@ -1,0 +1,81 @@
+baseURL = 'https://playbook.think.ke/'
+languageCode = 'en-us'
+title = 'THiNK Playbook'
+
+# Theme configuration - update to ensure theme is properly imported
+[module]
+  [[module.imports]]
+    path = "github.com/thuliteio/doks"
+
+# Site parameters
+[params]
+  description = "Technical documentation and guidelines for the Tech Innovators Network"
+  author = "THiNK Team"
+  github_repo = "https://github.com/think-ke/playbook"
+  
+  # Footer links
+  twitter = "TechInnovNet"
+  linkedin = "tech-innovators-network"
+  email = "info@think.ke"
+
+# Language configuration - simplified for now to troubleshoot
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 10
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 20
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 30
+
+# Security headers
+[security]
+  # Content Security Policy (CSP)
+  [security.contentSecurityPolicy]
+    defaultSrc = ["'self'"]
+    scriptSrc = ["'self'", "'unsafe-inline'"]
+    styleSrc = ["'self'", "'unsafe-inline'"]
+    imgSrc = ["'self'", "data:"]
+    connectSrc = ["'self'"]
+    fontSrc = ["'self'"]
+    objectSrc = ["'none'"]
+    mediaSrc = ["'self'"]
+    frameSrc = ["'self'"]
+    
+  # Enable Strict Transport Security (HSTS)
+  [security.headers]
+    [security.headers.strictTransportSecurity]
+      maxAge = 31536000
+      includeSubDomains = true
+      preload = true
+    
+    # Prevent MIME type sniffing
+    [security.headers.contentTypeNosniff]
+      value = "nosniff"
+    
+    # Control iframe embedding
+    [security.headers.xFrameOptions]
+      value = "DENY"
+    
+    # XSS Protection header
+    [security.headers.xXSSProtection]
+      value = "1; mode=block"
+    
+    # Referrer Policy
+    [security.headers.referrerPolicy]
+      value = "strict-origin-when-cross-origin"
+    
+    # Permissions Policy
+    [security.headers.permissionsPolicy]
+      value = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
