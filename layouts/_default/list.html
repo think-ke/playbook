@@ -1,28 +1,61 @@
 {{ define "main" }}
 <div class="docs-nav">
   <div class="docs-content">
-    <header>
-      <h1>{{ .Title }}</h1>
-      {{ if .Params.description }}
-      <p class="lead">{{ .Params.description }}</p>
-      {{ end }}
-    </header>
-    
-    {{ .Content }}
+    <div class="card" style="box-shadow: 0 3px 10px rgba(0,0,0,0.03); padding: 2rem; margin-bottom: 2rem;">
+      <header>
+        <div class="breadcrumbs" style="margin-bottom: 1rem; font-size: 0.9rem; color: #777;">
+          <a href="/" style="color: #777; text-decoration: none;">Home</a>
+          {{ if ne .Section "" }}
+          <span style="margin: 0 0.5rem;">/</span>
+          <a href="/{{ .Section }}/" style="color: #777; text-decoration: none;">{{ humanize .Section }}</a>
+          {{ end }}
+          {{ if ne .CurrentSection.Title .Title }}
+          <span style="margin: 0 0.5rem;">/</span>
+          <span>{{ .Title }}</span>
+          {{ end }}
+        </div>
+        
+        <h1>{{ .Title }}</h1>
+        {{ if .Params.description }}
+        <p class="lead">{{ .Params.description }}</p>
+        {{ end }}
+      </header>
+      
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </div>
     
     {{ if .Pages }}
     <section>
-      <h2>{{ .Title }} Pages</h2>
-      <ul>
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h2 style="display: flex; align-items: center;">
+          <span style="background: rgba(0,102,204,0.1); color: var(--primary-color); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 1rem;">📑</span>
+          {{ .Title }} Pages
+        </h2>
+      </div>
+      
+      <div class="page-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
         {{ range .Pages }}
-        <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <a href="{{ .Permalink }}" class="card page-card" style="display: block; text-decoration: none; color: inherit; height: 100%;">
+          <h3 style="margin-top: 0; color: var(--primary-color);">{{ .Title }}</h3>
           {{ if .Params.description }}
           <p>{{ .Params.description }}</p>
+          {{ else }}
+          <p style="color: #777;">Explore this section for more details.</p>
           {{ end }}
-        </li>
+          
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.9rem; color: #777;">
+              {{ if .Date }}
+              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+              {{ end }}
+            </span>
+            <span style="color: var(--primary-color); font-weight: 500;">Read more →</span>
+          </div>
+        </a>
         {{ end }}
-      </ul>
+      </div>
     </section>
     {{ end }}
   </div>

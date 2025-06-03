@@ -8,119 +8,456 @@
     
     
     <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-hover: #0052a3;
+            --secondary-color: #2c3e50;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+            --accent-color: #7b9ed9;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            padding: 0 20px;
+            color: var(--text-color);
+            background-color: #fff;
         }
+        
         header {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border-color);
             margin-bottom: 2rem;
-            padding-bottom: 1rem;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+        
+        header .site-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
             display: flex;
             gap: 2rem;
         }
+        
         nav a {
             text-decoration: none;
-            color: #0066cc;
+            color: var(--secondary-color);
             font-weight: 500;
+            position: relative;
+            padding-bottom: 0.25rem;
+            transition: color 0.2s;
         }
+        
         nav a:hover {
-            text-decoration: underline;
+            color: var(--primary-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
         }
         .hero {
             text-align: center;
-            padding: 3rem 0;
-            background: #f8f9fa;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             margin: 2rem -20px;
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
         }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(123, 158, 217, 0.1);
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(123, 158, 217, 0.1);
+        }
+        
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
+            font-size: 2.75rem;
+            margin-bottom: 1.25rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
+        
         .hero p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
+            font-size: 1.3rem;
+            color: #555;
+            max-width: 650px;
             margin: 0 auto;
+            line-height: 1.7;
         }
+        
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            background: #0066cc;
+            padding: 12px 28px;
+            background: var(--primary-color);
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 30px;
             margin-top: 2rem;
-            font-weight: 500;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
+            transition: all 0.3s ease;
         }
+        
         .btn:hover {
-            background: #0052a3;
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 102, 204, 0.25);
         }
+        
         .content {
-            margin: 2rem 0;
+            margin: 3rem 0;
+            line-height: 1.8;
+            font-size: 1.05rem;
         }
+        
         .sidebar {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: var(--light-bg);
+            padding: 1.8rem;
+            border-radius: 12px;
             margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
         }
+        
         .sidebar h3 {
             margin-top: 0;
-            color: #2c3e50;
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
         }
+        
         .sidebar ul {
             list-style: none;
             padding: 0;
+            margin-top: 1rem;
         }
+        
         .sidebar li {
-            margin: 0.5rem 0;
+            margin: 0.75rem 0;
         }
+        
         .sidebar a {
-            color: #0066cc;
+            color: var(--secondary-color);
             text-decoration: none;
+            transition: color 0.2s, transform 0.2s;
+            display: block;
+            padding: 0.25rem 0;
         }
+        
         .sidebar a:hover {
-            text-decoration: underline;
+            color: var(--primary-color);
+            transform: translateX(3px);
         }
+        
         footer {
-            border-top: 1px solid #eee;
-            margin-top: 3rem;
-            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            padding: 2.5rem 0;
             text-align: center;
             color: #666;
+            font-size: 0.95rem;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--secondary-color);
+            line-height: 1.3;
         }
+        
         h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.75rem;
+            margin-top: 2.5rem;
         }
+        
+        h3 {
+            margin-top: 2rem;
+        }
+        
         .docs-nav {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
+            margin: 0 -20px;
+            padding: 0 20px;
         }
+        
         .docs-content {
             flex: 1;
+            padding-right: 1rem;
         }
+        
         .docs-sidebar {
-            width: 250px;
+            width: 280px;
+            position: sticky;
+            top: 2rem;
+            align-self: flex-start;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar-item {
+            margin: 0.3rem 0;
+        }
+        
+        .sidebar-link {
+            display: block;
+            padding: 0.4rem 0;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s, transform 0.2s;
+            border-radius: 4px;
+        }
+        
+        .sidebar-link:hover {
+            color: var(--primary-color);
+            transform: translateX(3px);
+        }
+        
+        .sidebar-section {
+            margin: 1.5rem 0;
+        }
+        
+        .section-title {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .section-icon {
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .section-items {
+            list-style: none;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--border-color);
+            margin: 0.5rem 0 0.5rem 0.2rem;
+        }
+        
+        .sidebar-footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+        
+        .edit-link {
+            display: inline-flex;
+            align-items: center;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .edit-link:hover {
+            color: var(--primary-color);
+        }
+        
+         
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-item {
+            border-radius: 12px;
+            padding: 1.8rem;
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        
+        .lead {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        article {
+            margin-bottom: 3rem;
+        }
+        
+        code {
+            background: var(--light-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9em;
+            color: var(--secondary-color);
+        }
+        
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            font-style: italic;
+            color: #555;
+            margin-left: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        table th, table td {
+            border: 1px solid var(--border-color);
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        table th {
+            background: var(--light-bg);
+            font-weight: 600;
+        }
+        
+         
+        @media (max-width: 768px) {
+            .docs-nav {
+                flex-direction: column-reverse;
+                gap: 2rem;
+            }
+            
+            .docs-sidebar {
+                width: 100%;
+                position: static;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <a href="/" class="site-title">THiNK Playbook</a>
         <nav>
             <ul>
                 
@@ -136,37 +473,237 @@
         
 <div class="docs-nav">
   <div class="docs-content">
-    <header>
-      <h1>Version Control</h1>
+    <div class="card" style="box-shadow: 0 3px 10px rgba(0,0,0,0.03); padding: 2rem; margin-bottom: 2rem;">
+      <header>
+        <div class="breadcrumbs" style="margin-bottom: 1rem; font-size: 0.9rem; color: #777;">
+          <a href="/" style="color: #777; text-decoration: none;">Home</a>
+          
+          <span style="margin: 0 0.5rem;">/</span>
+          <a href="/docs/" style="color: #777; text-decoration: none;">Docs</a>
+          
+          
+        </div>
+        
+        <h1>Version Control</h1>
+        
+        <p class="lead">Guidelines for Git and version control practices</p>
+        
+      </header>
       
-      <p class="lead">Guidelines for Git and version control practices</p>
-      
-    </header>
-    
-    
+      <div class="content">
+        <p><strong>Version Control Best Practices for the Tech Innovators Network (THiNK)</strong>
+<em>Adapted from Git, GitHub, and VSCode workflows to streamline collaboration, ML projects, and code quality.</em></p>
+<hr>
+<h3 id="1-introduction"><strong>1. Introduction</strong></h3>
+<p>Version control isn’t just about tracking changes—it’s the backbone of collaboration, especially when juggling ML models, websites, databases, and web apps. At THiNK, we use <strong>Git</strong> for version control, <strong>GitHub</strong> for collaboration, and <strong>VSCode</strong> to supercharge our workflow. Whether you’re training a model, deploying an app, or fixing a bug, these practices ensure your work is organized, traceable, and secure.</p>
+<hr>
+<h3 id="2-git-workflow-basics"><strong>2. Git Workflow Basics</strong></h3>
+<p><strong>The THiNK Workflow</strong></p>
+<ol>
+<li>
+<p><strong>Branch Like a Boss</strong>:</p>
+<ul>
+<li>Work in <strong>feature branches</strong> (e.g., <code>feat/rag-app-search</code> or <code>fix/model-deployment-bug</code>).</li>
+<li>Use <strong>descriptive names</strong> to clarify the branch’s purpose.</li>
+</ul>
+</li>
+<li>
+<p><strong>Commit Early, Commit Often</strong>:</p>
+<ul>
+<li>Make <strong>atomic commits</strong>—focus each commit on a single task (e.g., <em>“Add training script for v2 model”</em>).</li>
+<li>Use <strong>commit prefixes</strong> to categorize changes (see examples below).</li>
+</ul>
+</li>
+<li>
+<p><strong>Pull Requests (PRs)</strong>:</p>
+<ul>
+<li>Open a PR when your branch is ready for review.</li>
+<li>Include testing instructions (e.g., <em>“Run <code>npm test</code> to validate model accuracy”</em>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Merge Strategically</strong>:</p>
+<ul>
+<li>Merge PRs only after approval and CI/CD checks pass.</li>
+<li>Keep the <code>main</code> branch deployable at all times.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="3-commit-prefixes"><strong>3. Commit Prefixes</strong></h3>
+<p><strong>Why Prefixes Matter</strong>:
+Prefixes make commit histories readable and help filter changes by type (e.g., <code>feat:</code>, <code>fix:</code>). Here’s what we use at THiNK:</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Prefix</strong></th>
+          <th><strong>Use Case</strong></th>
+          <th><strong>Example</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>feat:</code></td>
+          <td>New functionality</td>
+          <td><code>feat: Add RAG query handler</code></td>
+      </tr>
+      <tr>
+          <td><code>fix:</code></td>
+          <td>Bug fixes</td>
+          <td><code>fix: Resolve model training timeout</code></td>
+      </tr>
+      <tr>
+          <td><code>model:</code></td>
+          <td>ML model changes</td>
+          <td><code>model: Train v3 of image classifier</code></td>
+      </tr>
+      <tr>
+          <td><code>deploy:</code></td>
+          <td>Deployment updates</td>
+          <td><code>deploy: Roll out rag-app to production</code></td>
+      </tr>
+      <tr>
+          <td><code>chore:</code></td>
+          <td>Maintenance tasks</td>
+          <td><code>chore: Update VSCode extensions</code></td>
+      </tr>
+      <tr>
+          <td><code>docs:</code></td>
+          <td>Documentation changes</td>
+          <td><code>docs: Add model training guide</code></td>
+      </tr>
+      <tr>
+          <td><code>test:</code></td>
+          <td>Test additions/updates</td>
+          <td><code>test: Add unit tests for model inference</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Pro Tip</strong>: Use <code>git commit -m &quot;feat: Add RAG query handler&quot;</code> to save time.</p>
+<hr>
+<h3 id="4-branching-strategies"><strong>4. Branching Strategies</strong></h3>
+<ul>
+<li><strong>Feature Branches</strong>: Isolate work (e.g., <code>feat/rag-app</code>).</li>
+<li><strong>Hotfix Branches</strong>: Quick fixes for production (e.g., <code>hotfix/critical-bug</code>).</li>
+<li><strong>Release Branches</strong>: Prep for deployment (e.g., <code>release/v1.0</code>).</li>
+</ul>
+<p><strong>Avoid</strong>: Directly committing to <code>main</code> or <code>prod</code> branches.</p>
+<hr>
+<h3 id="5-vscode--git-power-ups"><strong>5. VSCode + Git Power-Ups</strong></h3>
+<ul>
+<li><strong>Staging Changes</strong>: Use the VSCode <strong>Source Control panel</strong> to stage/unstage files.</li>
+<li><strong>Commit Templates</strong>: Configure VSCode to auto-suggest commit prefixes.</li>
+<li><strong>Pull Requests</strong>: Open PRs directly from the editor.</li>
+<li><strong>GitHub Actions</strong>: Trigger CI/CD pipelines (e.g., model testing, deployment) from VSCode.</li>
+</ul>
+<p><strong>Example VSCode Shortcut</strong>:</p>
+<ul>
+<li>Stage all changes: <code>Ctrl+Shift+A</code> (Windows/Linux) or <code>Cmd+Shift+A</code> (Mac).</li>
+<li>Commit: <code>Ctrl+Shift+Enter</code> (after typing the message).</li>
+</ul>
+<hr>
+<h3 id="6-ml-specific-practices"><strong>6. ML-Specific Practices</strong></h3>
+<ul>
+<li><strong>Model Versioning</strong>: Tag trained models in commits (e.g., <code>model: Train v3 - 92% accuracy</code>).</li>
+<li><strong>Experiment Tracking</strong>: Use branches to isolate experiments (e.g., <code>exp/rag-new-dataset</code>).</li>
+<li><strong>Large Files</strong>: Store models/datasets in <strong>Git LFS</strong> (Large File Storage) to avoid bloating the repo.</li>
+<li><strong>CI/CD for ML</strong>: Automate model testing and deployment via GitHub Actions (e.g., <em>“Run unit tests on push to feature branches”</em>).</li>
+</ul>
+<p><strong>Example GitHub Action Snippet</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Model Testing  </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>: [<span style="color:#ae81ff">push]  </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">test</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4  </span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">python test_model.py  </span>
+</span></span></code></pre></div><hr>
+<h3 id="7-security--best-practices"><strong>7. Security &amp; Best Practices</strong></h3>
+<ul>
+<li><strong>Branch Protection</strong>: Require PRs for <code>main</code>/<code>prod</code> branches.</li>
+<li><strong>Secrets Management</strong>: Use GitHub Secrets for API keys, not hard-coded values.</li>
+<li><strong>Code Scanning</strong>: Enable GitHub Advanced Security to catch vulnerabilities.</li>
+<li><strong>Access Control</strong>: Limit write access to critical branches (e.g., <code>main</code>).</li>
+</ul>
+<p><strong>Pro Tip</strong>: Run <code>git log --graph --oneline</code> to audit changes before merging.</p>
+<hr>
+<h3 id="8-common-pitfalls-to-avoid"><strong>8. Common Pitfalls to Avoid</strong></h3>
+<ul>
+<li><strong>Committing Non-Code Files</strong>: Use <code>.gitignore</code> to exclude logs, temp files, and model artifacts.</li>
+<li><strong>Ignoring CI Failures</strong>: Fix failing tests <em>before</em> merging.</li>
+<li><strong>Overloading Branches</strong>: Keep branches focused—don’t mix model training and UI fixes.</li>
+</ul>
+<hr>
+<h3 id="9-conclusion"><strong>9. Conclusion</strong></h3>
+<p>Version control at THiNK is about <strong>clarity, collaboration, and speed</strong>. By using Git prefixes, isolating work in branches, and leveraging VSCode/GitHub tools, we keep our projects organized and our team aligned—whether we’re deploying a web app or fine-tuning a model.</p>
+<p><strong>Real-Life Example</strong>:
+A developer trained a new model in a branch named <code>model/v3-training</code>. They committed with <code>model: Train v3 - 92% accuracy</code> and opened a PR. During review, a teammate spotted a data leakage issue. The fix took 1 hour—saving weeks of retraining.</p>
+<p><em>Let’s keep our repos clean, our models sharp, and our workflows smooth!</em> 🚀</p>
+
+      </div>
+    </div>
     
     
   </div>
   
   <div class="docs-sidebar">
   <h3>Documentation</h3>
-  <ul>
-    <li><a href="/docs/">Overview</a></li>
-    <li>
-      <strong>Style Guide</strong>
-      <ul>
-        <li><a href="/docs/style-guide/version-control/">Version Control</a></li>
-        <li><a href="/docs/style-guide/code-review/">Code Review</a></li>
-        <li><a href="/docs/style-guide/pull-requests/">Pull Requests</a></li>
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-item"><a href="/docs/" class="sidebar-link">📚 Overview</a></li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">📐</span>
+        <strong>Style Guide</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/style-guide/" class="sidebar-link">Introduction</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/version-control/" class="sidebar-link">Version Control</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/code-review/" class="sidebar-link">Code Review</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/pull-requests/" class="sidebar-link">Pull Requests</a></li>
       </ul>
     </li>
-    <li>
-      <strong>Values</strong>
-      <ul>
-        <li><a href="/docs/values/">Company Values</a></li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">💎</span>
+        <strong>Values</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/values/" class="sidebar-link">Company Values</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">🏢</span>
+        <strong>Organization</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/organization/" class="sidebar-link">Structure</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">📝</span>
+        <strong>SOPs</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/sops/" class="sidebar-link">Standard Procedures</a></li>
       </ul>
     </li>
   </ul>
+  
+  <div class="sidebar-footer">
+    
+    <a href="https://github.com/think-ke/playbook/edit/main/content/docs/style-guide/version-control/_index.md" class="edit-link">
+      ✏️ Edit this page
+    </a>
+    
+  </div>
 </div>
 
 </div>
@@ -174,9 +711,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 THiNK Team. Built with Hugo.</p>
+        <p>&copy; 2025 THiNK Team. Built with ❤️ using Hugo.</p>
         
-        <p><a href="https://github.com/think-ke/playbook">View on GitHub</a></p>
+        <p><a href="https://github.com/think-ke/playbook" target="_blank" rel="noopener">View on GitHub</a></p>
         
     </footer>
 </body>

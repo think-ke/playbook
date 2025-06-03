@@ -1,11 +1,47 @@
 {{ define "main" }}
 <div class="docs-nav">
   <div class="docs-content">
-    <article>
+    <article class="card" style="box-shadow: 0 3px 10px rgba(0,0,0,0.03); padding: 2rem;">
       <header>
+        <div class="breadcrumbs" style="margin-bottom: 1rem; font-size: 0.9rem; color: #777;">
+          <a href="/" style="color: #777; text-decoration: none;">Home</a>
+          {{ if ne .Section "" }}
+          <span style="margin: 0 0.5rem;">/</span>
+          <a href="/{{ .Section }}/" style="color: #777; text-decoration: none;">{{ humanize .Section }}</a>
+          {{ end }}
+          {{ if ne .CurrentSection.Title .Title }}
+          <span style="margin: 0 0.5rem;">/</span>
+          <span>{{ .Title }}</span>
+          {{ end }}
+        </div>
+        
         <h1>{{ .Title }}</h1>
         {{ if .Params.description }}
         <p class="lead">{{ .Params.description }}</p>
+        {{ end }}
+        
+        <div class="meta" style="display: flex; margin-top: 1rem; font-size: 0.9rem; color: #777;">
+          {{ if .Date }}
+          <div style="margin-right: 2rem;">
+            <span style="margin-right: 0.5rem;">📅</span>
+            <span>Published: {{ .Date.Format "January 2, 2006" }}</span>
+          </div>
+          {{ end }}
+          
+          {{ if .Params.lastmod }}
+          <div>
+            <span style="margin-right: 0.5rem;">🔄</span>
+            <span>Updated: {{ .Params.lastmod.Format "January 2, 2006" }}</span>
+          </div>
+          {{ end }}
+        </div>
+        
+        {{ if .Params.tags }}
+        <div class="tags" style="margin-top: 1rem;">
+          {{ range .Params.tags }}
+            <span class="tag">{{ . }}</span>
+          {{ end }}
+        </div>
         {{ end }}
       </header>
       
@@ -13,11 +49,24 @@
         {{ .Content }}
       </div>
       
-      {{ if .Params.lastmod }}
-      <footer>
-        <p><small>Last updated: {{ .Params.lastmod.Format "January 2, 2006" }}</small></p>
+      <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <div class="page-nav" style="display: flex; justify-content: space-between;">
+          {{ with .PrevInSection }}
+          <a href="{{ .Permalink }}" class="btn" style="font-size: 0.9rem; padding: 8px 16px;">← Previous: {{ .Title }}</a>
+          {{ end }}
+          
+          {{ with .NextInSection }}
+          <a href="{{ .Permalink }}" class="btn" style="font-size: 0.9rem; padding: 8px 16px; margin-left: auto;">Next: {{ .Title }} →</a>
+          {{ end }}
+        </div>
+        
+        <div style="margin-top: 2rem; text-align: center; font-size: 0.9rem; color: #777;">
+          <p>Have questions? Found an issue? 
+            <a href="{{ .Site.Params.github_repo }}/issues/new" target="_blank" rel="noopener" style="color: var(--primary-color);">Report it</a> or
+            <a href="{{ .Site.Params.github_repo }}/edit/main/content/{{ .File.Path }}" target="_blank" rel="noopener" style="color: var(--primary-color);">edit this page</a>.
+          </p>
+        </div>
       </footer>
-      {{ end }}
     </article>
   </div>
   

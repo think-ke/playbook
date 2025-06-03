@@ -1,20 +1,62 @@
 <div class="docs-sidebar">
   <h3>Documentation</h3>
-  <ul>
-    <li><a href="/docs/">Overview</a></li>
-    <li>
-      <strong>Style Guide</strong>
-      <ul>
-        <li><a href="/docs/style-guide/version-control/">Version Control</a></li>
-        <li><a href="/docs/style-guide/code-review/">Code Review</a></li>
-        <li><a href="/docs/style-guide/pull-requests/">Pull Requests</a></li>
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-item"><a href="/docs/" class="sidebar-link">📚 Overview</a></li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">📐</span>
+        <strong>Style Guide</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/style-guide/" class="sidebar-link">Introduction</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/version-control/" class="sidebar-link">Version Control</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/code-review/" class="sidebar-link">Code Review</a></li>
+        <li class="sidebar-item"><a href="/docs/style-guide/pull-requests/" class="sidebar-link">Pull Requests</a></li>
       </ul>
     </li>
-    <li>
-      <strong>Values</strong>
-      <ul>
-        <li><a href="/docs/values/">Company Values</a></li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">💎</span>
+        <strong>Values</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/values/" class="sidebar-link">Company Values</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">🏢</span>
+        <strong>Organization</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/organization/" class="sidebar-link">Structure</a></li>
+      </ul>
+    </li>
+    
+    <li class="sidebar-section">
+      <div class="section-title">
+        <span class="section-icon">📝</span>
+        <strong>SOPs</strong>
+      </div>
+      <ul class="section-items">
+        <li class="sidebar-item"><a href="/docs/sops/" class="sidebar-link">Standard Procedures</a></li>
       </ul>
     </li>
   </ul>
+  
+  <div class="sidebar-footer">
+    {{ if .File }}
+    <a href="{{ .Site.Params.github_repo }}/edit/main/content/{{ .File.Path }}" class="edit-link">
+      ✏️ Edit this page
+    </a>
+    {{ else }}
+    <a href="{{ .Site.Params.github_repo }}" class="edit-link">
+      📖 View Documentation
+    </a>
+    {{ end }}
+  </div>
 </div>
