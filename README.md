@@ -2,11 +2,15 @@
 
 Welcome to the Tech Innovators Network (THiNK) Playbook. This repository serves as the central resource for our company's guidelines, values, and strategic initiatives.
 
+![THiNK Playbook](https://playbook.think.ke/images/logo.png)
+
 ## Overview
 
 Tech Innovators Network is dedicated to fostering innovation and collaboration among technology professionals. Our playbook outlines our mission, what we do, and how you can contribute to our community of thought leaders.
 
 ## Quick Start
+
+### Development with Dev Container
 
 1. **Prerequisites**:
    - Docker and VS Code with Dev Containers extension installed
@@ -32,6 +36,76 @@ Tech Innovators Network is dedicated to fostering innovation and collaboration a
    - Open http://localhost:1313 in your browser
    - Live reload is enabled by default
 
+### Development with pnpm and Hugo
+
+1. **Prerequisites**:
+   - Node.js (v18 or newer)
+   - pnpm installed (`npm install -g pnpm`)
+   - Hugo Extended version 0.123.8+
+
+2. **Setup**:
+   ```bash
+   pnpm install
+   ```
+
+3. **Development Server**:
+   ```bash
+   pnpm dev
+   ```
+
+4. **Build Static Site**:
+   ```bash
+   pnpm build
+   ```
+
+## Deployment Options
+
+### Docker Deployment
+
+This project includes Docker configuration for easy deployment:
+
+1. **Build Docker Image**:
+   ```bash
+   docker build -t think-playbook .
+   ```
+
+2. **Run Container**:
+   ```bash
+   docker run -d -p 8080:80 --name playbook think-playbook
+   ```
+
+3. **Access the Site**:
+   - Open http://localhost:8080 in your browser
+
+### Docker Compose Deployment
+
+For a more manageable deployment with potential to add more services:
+
+1. **Start Services**:
+   ```bash
+   docker-compose up -d
+   ```
+
+2. **Stop Services**:
+   ```bash
+   docker-compose down
+   ```
+
+### Production Deployment Considerations
+
+For production deployment:
+
+1. **Configure SSL**:
+   - Modify nginx.conf to include SSL certificates
+   - Use Let's Encrypt for free SSL certificates
+
+2. **Update baseURL**:
+   - Ensure the baseURL in `config/_default/hugo.toml` matches your production domain
+
+3. **CI/CD Pipeline**:
+   - Set up GitHub Actions for automated builds and deployments
+   - Example workflow available in `.github/workflows/`
+
 ## Our Mission
 
 To foster innovation and collaboration through knowledge sharing, mentorship, and community engagement. We empower the next generation of technology leaders by providing:
@@ -52,11 +126,19 @@ To foster innovation and collaboration through knowledge sharing, mentorship, an
 ```
 playbook/
 ├── content/               # Main content files
-│   ├── docs/             # Documentation
-│   └── blog/             # Blog posts and updates
-├── static/               # Static assets
-├── themes/               # Hugo themes
-└── hugo.toml            # Hugo configuration
+│   └── docs/              # Documentation by category
+├── static/                # Static assets
+├── layouts/               # Hugo template layouts
+│   ├── _default/          # Default templates
+│   └── partials/          # Reusable template parts
+├── assets/                # Processed assets (CSS, JS)
+├── config/                # Hugo configuration
+│   └── _default/          # Default configuration
+├── public/                # Generated static site (after build)
+├── Dockerfile             # Docker image definition
+├── docker-compose.yml     # Docker Compose configuration
+├── nginx.conf             # Nginx web server configuration
+└── package.json           # npm/pnpm dependencies and scripts
 ```
 
 ## Development
@@ -69,8 +151,21 @@ playbook/
    - Create new pages with `hugo new docs/your-page.md`
 
 2. **Preview Changes**:
-   - Run `hugo server -D`
+   - Run `hugo server -D` or `pnpm dev`
    - Changes are live-reloaded
+
+### Site Structure
+
+The playbook follows a structured navigation:
+
+- **Style Guide:** Coding standards, version control, code review
+- **Onboarding:** New employee orientation and resources
+- **Products:** Details about company products and services
+- **Company Values:** Our core principles and culture
+- **Organization:** Company structure and teams
+- **SOPs:** Standard operating procedures
+- **Crisis Management:** Incident response guidelines
+- **HR Policies:** Human resources information
 
 ### Contributing
 
@@ -92,11 +187,23 @@ playbook/
 
 4. Follow our [Pull Request Guidelines](content/docs/style-guide/pull-requests/creating-pull-requests.md)
 
+## Technical Details
+
+- **Static Site Generator:** Hugo Extended v0.123.8+
+- **JS Package Manager:** pnpm
+- **Container Runtime:** Docker/Docker Compose
+- **Web Server:** Nginx
+- **Base Container:** Node.js 20 Alpine (build), Nginx Alpine (production)
+
 ## Getting Help
 
 - **Documentation:** See the [Docs section](/content/docs/index.md)
 - **Issues:** Create a GitHub issue for bugs or suggestions
 - **Contact:** Email support@think.ke for urgent matters
+
+## License
+
+[MIT License](LICENSE)
 
 ---
 
