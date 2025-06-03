@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="docs-nav">
+  <div class="docs-content">
+    <header>
+      <h1>{{ .Title }}</h1>
+      {{ if .Params.description }}
+      <p class="lead">{{ .Params.description }}</p>
+      {{ end }}
+    </header>
+    
+    {{ .Content }}
+    
+    {{ if .Pages }}
+    <section>
+      <h2>{{ .Title }} Pages</h2>
+      <ul>
+        {{ range .Pages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          {{ if .Params.description }}
+          <p>{{ .Params.description }}</p>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  </div>
+  
+  {{ partial "docs-sidebar.html" . }}
+</div>
+{{ end }}

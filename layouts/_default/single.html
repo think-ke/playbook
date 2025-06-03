@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="docs-nav">
+  <div class="docs-content">
+    <article>
+      <header>
+        <h1>{{ .Title }}</h1>
+        {{ if .Params.description }}
+        <p class="lead">{{ .Params.description }}</p>
+        {{ end }}
+      </header>
+      
+      <div class="content">
+        {{ .Content }}
+      </div>
+      
+      {{ if .Params.lastmod }}
+      <footer>
+        <p><small>Last updated: {{ .Params.lastmod.Format "January 2, 2006" }}</small></p>
+      </footer>
+      {{ end }}
+    </article>
+  </div>
+  
+  {{ partial "docs-sidebar.html" . }}
+</div>
+{{ end }}

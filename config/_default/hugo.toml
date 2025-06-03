@@ -1,14 +1,24 @@
-# Base configuration for all environments
+# Simple Hugo configuration without theme
+baseURL = 'https://playbook.think.ke/'
+languageCode = 'en-us'
 title = "THiNK Playbook"
-enableGitInfo = true
 
 [params]
   description = "Technical documentation and guidelines for the Tech Innovators Network"
-  docsVersioning = false
-  
-[build]
-  writeStats = true
+  author = "THiNK Team"
+  github_repo = "https://github.com/think-ke/playbook"
 
-[security]
-  [security.funcs]
-    getenv = ['^HUGO_', '^CI$']
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 20
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 30
