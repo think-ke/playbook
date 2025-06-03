@@ -1,7 +1,10 @@
-# Simple Hugo configuration without theme
 baseURL = 'https://playbook.think.ke/'
 languageCode = 'en-us'
 title = "THiNK Playbook"
+
+# Use Doks theme as Hugo module
+[[module.imports]]
+  path = "github.com/thuliteio/doks"
 
 [params]
   description = "Technical documentation and guidelines for the Tech Innovators Network"
