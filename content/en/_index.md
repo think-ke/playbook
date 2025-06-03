@@ -1,45 +1,37 @@
 ---
-title: "Tech Innovators Network Playbook"
-description: "Central resource for THiNK guidelines, values, and strategic initiatives"
-lead: "Welcome to the Tech Innovators Network (THiNK) Playbook"
-date: 2023-09-07T16:33:54+02:00
-lastmod: 2024-02-27T09:30:56+01:00
+title: "THiNK Internal Company Playbook"
+description: "The comprehensive guide to working at Tech Innovators Network"
+lead: "Welcome to the Tech Innovators Network (THiNK) Playbook - your comprehensive guide to our company culture, processes, and values."
+date: 2025-06-03T00:00:00+00:00
+lastmod: 2025-06-03T00:00:00+00:00
 draft: false
 images: []
 ---
 
-# Tech Innovators Network (THiNK)
+## Mission Statement
 
-## Our Mission
-To foster innovation and collaboration among technology professionals through knowledge sharing, mentorship, and community engagement.
+To empower innovators and businesses in the tech community through discovery, support, and collaboration.
 
-## What We Do
+## Vision Statement
 
-### Events & Meetups
-- Monthly tech talks
-- Quarterly hackathons
-- Networking sessions
-- Workshops and training
+To be the leading platform for fostering innovation and technological advancement in our community, with the THiNKiT Smart Speaker Platform at the forefront of this change.
 
-### Mentorship Program
-- One-on-one guidance
-- Career development
-- Technical skill enhancement
-- Leadership training
+## Quick Navigation
 
-### Community Projects
-- Open source contributions
-- Social impact initiatives
-- Technology education outreach
-- Innovation challenges
+- [Company Overview](/docs/company/)
+- [Organizational Structure](/docs/organization/)
+- [Company Culture](/docs/culture/)
+- [Onboarding](/docs/onboarding/)
+- [Standard Operating Procedures](/docs/sops/)
+- [Product Overview](/docs/products/)
+- [IT and Systems](/docs/it/)
+- [HR Policies](/docs/hr/)
+- [Crisis Management](/docs/crisis/)
 
-## Join THiNK
-- Connect with industry experts
-- Access exclusive resources
-- Participate in collaborative projects
-- Grow your professional network
+## About THiNK
 
-### Contact Us
-Email: info@thinkinnovators.org
-Twitter: @TechInnovNet
-LinkedIn: Tech Innovators Network
+THiNK is a tech community-driven initiative for the discovery and support of innovators and businesses. We bring together a community of innovators and collaborating organizations to provide services through an inclusive platform. Our flagship product is the THiNKiT Smart Speaker Platform.
+
+---
+
+*This playbook is a living document. It should be reviewed and updated regularly to ensure that it remains accurate and relevant. We recommend reviewing the playbook on a quarterly basis and making updates as needed. All employees are encouraged to suggest changes and improvements to the playbook.*
