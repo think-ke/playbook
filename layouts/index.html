@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="hero">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.lead | default .Params.description }}</p>
+  <a class="btn" href="/docs/" role="button">Get Started</a>
+</div>
+
+<div class="content">
+  {{ .Content }}
+</div>
+
+<div class="sidebar">
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="/docs/style-guide/">Style Guide</a></li>
+    <li><a href="/docs/values/">Company Values</a></li>
+    <li><a href="/docs/style-guide/version-control/">Version Control</a></li>
+    <li><a href="/docs/style-guide/code-review/">Code Review</a></li>
+  </ul>
+</div>
+
+<section style="display: flex; gap: 2rem; margin-top: 3rem;">
+  <div style="flex: 1; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+    <h3>Events & Meetups</h3>
+    <p>Monthly tech talks, quarterly hackathons, networking sessions, and training.</p>
+  </div>
+  <div style="flex: 1; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+    <h3>Mentorship Program</h3>
+    <p>One-on-one guidance, career development, technical skill enhancement, and leadership training.</p>
+  </div>
+  <div style="flex: 1; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+    <h3>Community Projects</h3>
+    <p>Open source contributions, social impact initiatives, education outreach, and innovation challenges.</p>
+  </div>
+</section>
+{{ end }}
