@@ -25,3 +25,7 @@ title = "THiNK Playbook"
     name = "About"
     url = "/about/"
     weight = 30
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
