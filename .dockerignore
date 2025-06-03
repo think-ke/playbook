@@ -1,0 +1,47 @@
+# Version control
+.git/
+.gitignore
+.github/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Hugo build artifacts
+/public/
+/resources/
+/resources/_gen/
+.hugo_build.lock
+
+# Other build artifacts
+.cache/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Docker files
+.devcontainer/
+docker-compose*.yml
+Dockerfile.*
+
+# Development files
+README.md
+LICENSE
+*.log
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
