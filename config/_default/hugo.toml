@@ -15,15 +15,15 @@ title = "THiNK Playbook"
 [menu]
   [[menu.main]]
     name = "Home"
-    url = "/"
+    url = "/playbook/"
     weight = 10
   [[menu.main]]
     name = "Docs"
-    url = "/docs/"
+    url = "/playbook/docs/"
     weight = 20
   [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "/playbook/about/"
     weight = 30
 
 [caches]

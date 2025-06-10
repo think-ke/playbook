@@ -4,10 +4,10 @@
     <article class="card" style="box-shadow: 0 3px 10px rgba(0,0,0,0.03); padding: 2rem;">
       <header>
         <div class="breadcrumbs" style="margin-bottom: 1rem; font-size: 0.9rem; color: #777;">
-          <a href="/" style="color: #777; text-decoration: none;">Home</a>
+          <a href="{{ .Site.BaseURL }}" style="color: #777; text-decoration: none;">Home</a>
           {{ if ne .Section "" }}
           <span style="margin: 0 0.5rem;">/</span>
-          <a href="/{{ .Section }}/" style="color: #777; text-decoration: none;">{{ humanize .Section }}</a>
+          <a href="{{ .Site.BaseURL }}{{ .Section }}/" style="color: #777; text-decoration: none;">{{ humanize .Section }}</a>
           {{ end }}
           {{ if ne .CurrentSection.Title .Title }}
           <span style="margin: 0 0.5rem;">/</span>

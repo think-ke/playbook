@@ -18,15 +18,15 @@ To be the leading platform for fostering innovation and technological advancemen
 
 ## Quick Navigation
 
-- [Company Overview](/docs/company/)
-- [Organizational Structure](/docs/organization/)
-- [Company Culture](/docs/culture/)
-- [Onboarding](/docs/onboarding/)
-- [Standard Operating Procedures](/docs/sops/)
-- [Product Overview](/docs/products/)
-- [IT and Systems](/docs/it/)
-- [HR Policies](/docs/hr/)
-- [Crisis Management](/docs/crisis/)
+- [Company Overview](../company/)
+- [Organizational Structure](../organization/)
+- [Company Culture](../culture/)
+- [Onboarding](../onboarding/)
+- [Standard Operating Procedures](../sops/)
+- [Product Overview](../products/)
+- [IT and Systems](../it/)
+- [HR Policies](../hr/)
+- [Crisis Management](../crisis/)
 
 ## About THiNK
 
