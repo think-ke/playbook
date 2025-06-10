@@ -185,7 +185,7 @@ The playbook follows a structured navigation:
    git push origin feat/your-feature
    ```
 
-4. Follow our [Pull Request Guidelines](content/docs/style-guide/pull-requests/creating-pull-requests.md)
+4. Follow our [Pull Request Guidelines](https://think-ke.github.io/playbook/docs/style-guide/pull-requests/creating-pull-requests/)
 
 ## Technical Details
 
