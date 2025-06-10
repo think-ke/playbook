@@ -5,7 +5,7 @@
     <h1>{{ .Title }}</h1>
     <p>{{ .Params.lead | default .Params.description }}</p>
     <div class="hero-buttons">
-      <a class="btn btn-primary" href="{{ relURL "/docs/" }}" role="button">Get Started</a>
+      <a class="btn btn-primary" href="{{ .Site.BaseURL }}docs/" role="button">Get Started</a>
       <a class="btn btn-outline" href="{{ .Site.Params.github_repo }}" role="button">View on GitHub</a>
     </div>
   </div>
@@ -23,21 +23,21 @@
         <div class="feature-icon">📘</div>
         <h3>Style Guide</h3>
         <p>Best practices for code quality, formatting, and organization across all projects.</p>
-        <a href="{{ relURL "/docs/style-guide/" }}" class="btn btn-sm">Learn More</a>
+        <a href="{{ .Site.BaseURL }}docs/style-guide/" class="btn btn-sm">Learn More</a>
       </div>
       
       <div class="feature-item">
         <div class="feature-icon">🧭</div>
         <h3>Onboarding</h3>
         <p>Get started with our comprehensive onboarding process for new team members.</p>
-        <a href="{{ relURL "/docs/onboarding/" }}" class="btn btn-sm">Learn More</a>
+        <a href="{{ .Site.BaseURL }}docs/onboarding/" class="btn btn-sm">Learn More</a>
       </div>
       
       <div class="feature-item">
         <div class="feature-icon">🛠️</div>
         <h3>Products</h3>
         <p>Explore our product lineup and learn about our technology innovations.</p>
-        <a href="{{ relURL "/docs/products/" }}" class="btn btn-sm">Learn More</a>
+        <a href="{{ .Site.BaseURL }}docs/products/" class="btn btn-sm">Learn More</a>
       </div>
     </div>
   </div>
@@ -50,13 +50,13 @@
         <div class="sidebar">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="{{ relURL "/docs/style-guide/" }}">Style Guide</a></li>
-            <li><a href="{{ relURL "/docs/values/" }}">Company Values</a></li>
-            <li><a href="{{ relURL "/docs/company/" }}">About Our Company</a></li>
-            <li><a href="{{ relURL "/docs/onboarding/" }}">Onboarding Guide</a></li>
-            <li><a href="{{ relURL "/docs/products/" }}">Our Products</a></li>
-            <li><a href="{{ relURL "/docs/culture/" }}">Team Culture</a></li>
-            <li><a href="{{ relURL "/docs/organization/" }}">Company Structure</a></li>
+            <li><a href="{{ .Site.BaseURL }}docs/style-guide/">Style Guide</a></li>
+            <li><a href="{{ .Site.BaseURL }}docs/values/">Company Values</a></li>
+            <li><a href="{{ .Site.BaseURL }}docs/company/">About Our Company</a></li>
+            <li><a href="{{ .Site.BaseURL }}docs/onboarding/">Onboarding Guide</a></li>
+            <li><a href="{{ .Site.BaseURL }}docs/products/">Our Products</a></li>
+            <li><a href="{{ .Site.BaseURL }}docs/culture/">Team Culture</a></li>
+            <li><a href="{{ .Site.BaseURL }}docs/organization/">Company Structure</a></li>
           </ul>
         </div>
       </div>
