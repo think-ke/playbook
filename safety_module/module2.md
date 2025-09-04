@@ -6,20 +6,64 @@
 **Safety by Design (SbD)** = embedding user safety, dignity, and equity proactively into every stage of digital product development.
 
 - **Reactive safety** = adding fixes after harm happens.  
-- **Proactive SbD** = predicting harms, preventing misuse, and building protections from the start.  
-
-**SbD is grounded in:**
-- Proactive Harm Prevention  
-- Provider Responsibility (safety is a duty of care, not user burden)  
-- User Empowerment (tools for choice, reporting, blocking)  
-- Transparency & Accountability  
-- Holistic Lifecycle Integration  
-- Synergy with Privacy & Security  
-- Inclusivity & Gender Sensitivity  
+- **Proactive SbD** = predicting harms, preventing misuse, and building protections from the start. 
 
 ---
 
-### 1.2 Mapping SbD to the AI Product Lifecycle
+### 1.2 Core Principles of Safety by Design
+
+#### 1. Proactive Harm Prevention
+**Meaning**: Anticipate risks before harm occurs; design out “abuse potential” at the earliest stage.  
+**Practical Measures**:  
+- Conduct risk assessments during ideation.  
+- Apply abusability testing (deliberately trying to misuse features).  
+- Include red-teaming to simulate malicious actors.  
+
+#### 2. Service Provider Responsibility
+**Meaning**: The burden of safety is on companies, not users.  
+**Practical Measures**:  
+- Duty of care policies.  
+- In-house trust & safety teams.  
+- Transparent enforcement of standards.  
+
+#### 3. User Empowerment & Autonomy
+**Meaning**: Give users meaningful control over their safety and experience.  
+**Practical Measures**:  
+- Strong privacy and security settings enabled by default.  
+- Language accessibility.  
+- One-click blocking, muting, and reporting tools.  
+
+#### 4. Transparency & Accountability
+**Meaning**: Platforms must explain decisions and how harms are handled.  
+**Practical Measures**:  
+- Transparency reports.  
+- Public safety metrics (e.g., response times).  
+- Disaggregated data collection.  
+
+#### 5. Holistic Lifecycle Integration
+**Meaning**: Safety is embedded across the full product lifecycle.  
+**Practical Measures**:  
+- Safety checkpoints at every phase.  
+- “Safety gates” before launch.  
+- Post-incident learning loops.  
+
+#### 6. Synergy with Privacy & Security
+**Meaning**: Safety works alongside privacy rights and security.  
+**Practical Measures**:  
+- Privacy by default.  
+- Secure data storage.  
+- Regular security audits.  
+
+#### 7. Inclusivity & Consideration for All Users
+**Meaning**: Safety must account for diverse users, including vulnerable groups.  
+**Practical Measures**:  
+- Co-design with marginalized groups.  
+- Accessibility features (e.g., low-bandwidth, screen reader).  
+- Language inclusivity.  
+
+---
+
+### 1.3 Mapping SbD to the AI Product Lifecycle
 
 #### 1. Ideation / Concept
 - **SbD Action**: Conduct harm forecasting & stakeholder mapping.  
