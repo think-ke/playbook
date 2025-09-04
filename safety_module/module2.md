@@ -1,4 +1,4 @@
-# 🧩 Module 2: Safety by Design Across the AI Product Lifecycle
+# Module 2: Safety by Design Across the AI Product Lifecycle
 
 ## 1. Topics & Content
 
