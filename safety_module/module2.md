@@ -24,32 +24,32 @@
 #### 1. Ideation / Concept
 - **SbD Action**: Conduct harm forecasting & stakeholder mapping.  
 - **Checklist**: Who are the vulnerable groups? What misuse could occur?  
-- **Kenya Example**: Mobile lending app excluding informal workers or women.  
+- **Example**: Mobile lending app excluding informal workers or women.  
 
 #### 2. Design
 - **SbD Action**: Threat modeling & inclusive design workshops.  
 - **Checklist**: Are women, rural users, low-literacy users considered? Are defaults safe?  
-- **Kenya Example**: A social media platform with moderation tools in Kiswahili to counter online harassment.  
+- **Example**: A social media platform with moderation tools in Kiswahili to counter online harassment.  
 
 #### 3. Development
 - **SbD Action**: Build safety features into core architecture. Apply “privacy by default.”  
 - **Checklist**: Is sensitive user data encrypted? Are safety features hard-coded?  
-- **Kenya Example**: AgriTech platforms storing farmers’ personal data securely to avoid exploitation.  
+- **Example**: AgriTech platforms storing farmers’ personal data securely to avoid exploitation.  
 
 #### 4. Testing / Quality Assurance
 - **SbD Action**: Abusability testing (deliberately trying to misuse). Diverse user testing.  
 - **Checklist**: Can the system be gamed? Can attackers bypass safeguards?  
-- **Kenya Example**: Test AI medical chatbots in English + Kiswahili + Sheng to ensure clear communication.  
+- **Example**: Test AI medical chatbots in English + Kiswahili + Sheng to ensure clear communication.  
 
 #### 5. Launch / Deployment
 - **SbD Action**: Clear safety communication to users. Safe defaults. Responsible rollout.  
 - **Checklist**: Are reporting tools obvious? Are support pathways integrated?  
-- **Kenya Example**: M-Pesa AI fraud detection system that includes clear fraud-reporting channels.  
+- **Example**: M-Pesa AI fraud detection system that includes clear fraud-reporting channels.  
 
 #### 6. Monitoring & Maintenance
 - **SbD Action**: Continuous safety audits, update features as harms evolve.  
 - **Checklist**: Are complaints reviewed regularly? Are safety reports public?  
-- **Kenya Example**: Biometric voter registration systems updated after cases of wrongful exclusion.  
+- **Example**: Biometric voter registration systems updated after cases of wrongful exclusion.  
 
 ---
 
