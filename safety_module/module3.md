@@ -1,4 +1,4 @@
-# 🧩 Module 3: Safe Use of AI Products (Safety in Use)
+# Module 3: Safe Use of AI Products (Safety in Use)
 
 ## 1. Topics & Content
 
