@@ -125,7 +125,7 @@ At **Tech Innovators Network (THiNK)**, we use the **CAP framework** to validate
 
 - 📘 **THiNK AI Safety Playbook (coming soon)** — practical tools for bot safety.  
 - 🤝 **NMWSO Safety by Design Curriculum (IREX Kenya)** — advanced training content. 
-- 🔍 **IREX chatbot on web.think.ke** - your go to chatbot for all queries safety by design.
+- 🔍 **IREX chatbot on web.think.ke(currently ongoing testing)** - your go to chatbot for all queries safety by design.Feel free to engage with the chatbot.
 - 🔍 **Ongoing resources and botathons** for builders committed to responsible AI.  
 
 ---
