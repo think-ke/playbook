@@ -6,7 +6,7 @@
 
 ## Introduction
 
-AI bots are increasingly shaping how people access information, make decisions, and engage with services. With this power comes responsibility. **Safety by Design (SBD)** ensures bots are built with trust, inclusivity, and resilience at their core.
+AI bots are increasingly shaping how people access information, make decisions, and engage with services. With this power comes responsibility. **Safety by Design (SBD)** ensures bots are built with trust,responsibility,quality, inclusivity, and resilience at their core.
 
 This guidance provides practical steps for bot builders to embed safety throughout the entire lifecycle of their projects — from concept to scale.
 
@@ -43,7 +43,7 @@ This guidance provides practical steps for bot builders to embed safety througho
 - ✅ **Guardrails in Dialogue** – refusal logic, content filters, safe fallback answers  
 - ✅ **Bias Detection** – representative datasets, fairness audits  
 - ✅ **User Controls** – opt-out options, report abuse buttons, transparency on scope  
-- ✅ **Privacy by Design** – minimal data retention, anonymization, GDPR/AI Code compliance  
+- ✅ **Privacy by Design** – minimal data retention, anonymization, DPA / DKS 3007 AI code of practice äcompliance  
 - ✅ **Accessibility & Inclusivity** – support multiple languages, voice/screen readers, plain language modes  
 - ✅ **Transparency** – explain what the bot can and cannot do  
 
@@ -70,6 +70,33 @@ This guidance provides practical steps for bot builders to embed safety througho
 - Continuous audits and updates  
 - Collect and respond to user feedback  
 - Align with evolving AI Code of Practice  
+
+---
+## Privacy-First Compliance   
+insights when creating a compliance checklist   
+
+### Key items to consider
+- ✅ **Strong foundation** – PII detection, anonymization, and secure API architecture  
+- ⚠️ **Partial compliance** – Privacy disclaimers present, but UI banner and retention policy missing  
+- ❌ **Gaps** – Analytics still store direct user IDs; retention scheduling not enforced  
+
+### Compliance Checklist  example
+| Area | Requirement | Status | Notes |  
+|------|-------------|--------|-------|  
+| Privacy Disclaimer | Inform users of no PII collection | ✅ | Implemented in system prompt & footer; UI banner pending |  
+| Input Filtering | Warn & filter PII | ✅ | Presidio-based detection + event sanitization |  
+| Metadata & Logs | Minimize & anonymize | ⚠️ | User IDs stored directly; event sanitization improved |  
+| Retention | Set retention/cleanup policies | ❌ | Tooling exists; no formal policy or automation |  
+| Access Control | Secure endpoints & logs | ✅ | Strong RBAC + API key security |  
+| Audit Trail | Document privacy compliance | ⚠️ | Logs exist; need privacy-focused audit trail |  
+| Public Sector Ethics | Align with DPA + accessibility | ⚠️ | Awareness documented; accessibility audit missing |  
+
+### Recommended Actions for Builders  
+- Add **UI privacy disclaimers** + policy link in chatbot interface  
+- Implement **automatic log cleanup & retention policies** (e.g., 90 days)  
+- Anonymize **user IDs in analytics**  
+- Conduct **formal accessibility audits (WCAG 2.1)**  
+- Establish **regular compliance reviews**  
 
 ---
 
