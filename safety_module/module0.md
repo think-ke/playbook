@@ -1,6 +1,6 @@
 # Safety by Design: Guidance for AI Bot Builders
 
-*A THiNK Resource for Innovators and Developers*
+*A THiNK AI Safety Resource for Innovators and Developers*
 
 ---
 
