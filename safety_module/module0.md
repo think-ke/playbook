@@ -124,13 +124,14 @@ At **Tech Innovators Network (THiNK)**, we use the **CAP framework** to validate
 ## Looking Ahead
 
 - 📘 **THiNK AI Safety Playbook (coming soon)** — practical tools for bot safety.  
-- 🤝 **NMWSO Safety by Design Curriculum (IREX Kenya)** — advanced training content.  
-- 🔍 **Ongoing resources and workshops** for builders committed to responsible AI.  
+- 🤝 **NMWSO Safety by Design Curriculum (IREX Kenya)** — advanced training content. 
+- 🔍 **IREX chatbot on web.think.ke** - your go to chatbot for all queries safety by design.
+- 🔍 **Ongoing resources and botathons** for builders committed to responsible AI.  
 
 ---
 
 ## Key Takeaway
 
 **Safety by Design isn’t a single feature — it’s a mindset.**  
-By embedding safety at every stage, bot builders can create AI systems that are not only functional but also safe, inclusive, and trusted by users.
+By embedding safety at every stage, you as a chatbot builders can engineer AI systems that are not only functional but also safe,responsible, inclusive, and trusted by users.
 
