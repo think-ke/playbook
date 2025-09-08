@@ -63,7 +63,7 @@
 
 ---
 
-### 1.3 Mapping SbD to the AI Product Lifecycle
+### 1 Mapping SbD to the AI Product Lifecycle
 
 #### 1. Ideation / Concept
 - **SbD Action**: Conduct harm forecasting & stakeholder mapping.  
