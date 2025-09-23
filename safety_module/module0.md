@@ -1,12 +1,12 @@
 # Safety by Design: Guidance for AI Bot Builders
 
-*A THiNK AI Safety Resource for Innovators and Developers*
+*A THiNK AI Safety Resource for Innovators and AI/ML Developers*
 
 ---
 
 ## Introduction
 
-AI bots are increasingly shaping how people access information, make decisions, and engage with services. With this power comes responsibility. **Safety by Design (SBD)** ensures bots are built with trust,responsibility,quality, inclusivity, and resilience at their core.
+AI bots are increasingly shaping how people access information, make decisions, and engage with services. With this GREAT power comes responsibility. **Safety by Design (SBD)** ensures bots are built with trust,responsibility,quality, inclusivity, and resilience at their core.
 
 This guidance provides practical steps for bot builders to embed safety throughout the entire lifecycle of their projects — from concept to scale.
 
