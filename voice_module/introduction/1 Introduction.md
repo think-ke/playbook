@@ -13,7 +13,7 @@ By emphasising low-resource languages in **Kenya** ,such as **Kikuyu, Dholuo, Ma
 - Reducing structural bias in artificial intelligence.  
 - Stimulating local innovation and digital economies.  
 
-This Playbook is designed as a living resource. It is modular, adaptable, and meant to evolve through contributions from practitioners, communities, and researchers.
+***This Playbook is designed as a living resource. It is modular, adaptable, and meant to evolve through contributions from practitioners, communities, and researchers.***
 
 ---
 
