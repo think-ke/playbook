@@ -4,9 +4,9 @@ The rapid development of digital technologies has fundamentally reshaped the way
 
 This exclusion is not merely technical; it carries cultural and economic consequences. When communities cannot use their mother tongues in digital spaces, they risk marginalisation, reduced access to opportunities, and the erosion of linguistic heritage.
 
-The Tech Innovators Network Voice Playbook was created to address this imbalance. It provides a structured and practical framework for collecting, managing, and sharing voice data in ways that are open, ethical, and sustainable.
+The **Tech Innovators Network Voice Playbook** was created to address this imbalance. It provides a structured and practical framework for collecting, managing, and sharing voice data in ways that are open, ethical, and sustainable.
 
-By emphasising low-resource languages in Kenya ,such as Kikuyu, Dholuo, Maasai, Kalenjin, and Somali,just to name a few, the Playbook highlights the importance of community-led approaches in:
+By emphasising low-resource languages in **Kenya** ,such as **Kikuyu, Dholuo, Maasai, Kalenjin, and Somali**,just to name a few, the Playbook highlights the importance of community-led approaches in:
 
 - Preserving linguistic and cultural heritage.  
 - Enabling inclusive digital participation.  
