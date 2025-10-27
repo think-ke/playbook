@@ -194,10 +194,17 @@ Typically secured from **international development partners** to fund the initia
 
 ---
 
-## 3.1 Architectural Philosophy: Modularity and Interoperability
+## Architectural Philosophy: Central Hub and Spoke Model
 
-The GovBot architecture is inspired by **federalism**:  
-a *central government* (**Metabot**) working with *state governments* (**CBots**) under a *common constitution* (**Collections and Standards**).
+The **GovBot architecture** follows an **integrated service delivery model** where the **central gateway (Metabot)** connects citizens directly to **specialised ministry knowledge bases (CBots)**.  
+
+This streamlined approach ensures:
+
+- **Centralised Access Point:** Citizens have one unified interface for all government services.  
+- **Distributed Expertise:** Each ministry maintains deep, specialised knowledge in its own domain.  
+- **Shared Knowledge Base:** All bots contribute to and benefit from a common, verified information source.  
+- **Scalable Service Delivery:** New agencies can be added as independent spokes without disrupting existing services.
+
 
 This **loosely coupled, modular** approach ensures that:
 
@@ -209,13 +216,13 @@ This **loosely coupled, modular** approach ensures that:
 This architecture aligns with the **GovStack Building Block methodology**, treating GovBot itself as a **horizontal, reusable component** that can orchestrate interactions across other DPI components.
 
 ---
-
+<!--
 ## 3.2 The Metabot (GovBot): The Central Orchestrator and Public Face
 
 The **Metabot** serves as the single point of entry for citizens and the main “face” of the service.  
 It acts as the orchestrator and traffic controller of all interactions within the ecosystem.
 
-### 🔧 Primary Functions
+### Primary Functions
 
 - **Intent Classification & Routing:**  
   Performs initial analysis of user queries to determine broad topics (e.g., *health*, *business*, *immigration*) and routes conversations to the appropriate specialised CBots.
@@ -229,7 +236,7 @@ It acts as the orchestrator and traffic controller of all interactions within th
 - **Channel Management:**  
   Orchestrates multi-channel delivery (web, USSD, WhatsApp, voice) while maintaining conversation context.
 
-### ⚙️ Technical Characteristics
+### Technical Characteristics
 
 - Lightweight NLP for broad intent classification  
 - Minimal domain-specific knowledge to avoid duplication  
@@ -345,3 +352,4 @@ Relevant Chunks + User Query → LLM Prompt → Verified Response + Citations
 ### 🏗️ System Architecture Overview
 
 
+-->
