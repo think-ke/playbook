@@ -131,7 +131,7 @@ This should be a single, inspiring sentence that guides all efforts.
 
 ## 2.3 Establishing Robust Governance, Ethics, and Compliance
 
-### ⚖️ AI Ethics Framework
+### AI Ethics Framework
 
 - Establish a **multi-stakeholder ethics committee** to oversee the project.  
 - Implement a **Conformity Assessment Process** to benchmark the bot against national regulations and international standards (e.g., OECD AI Principles, UNESCO Recommendations).  
@@ -188,3 +188,160 @@ Typically secured from **international development partners** to fund the initia
 ---
 
 *Effective strategy and governance turn GovBot from a technical project into a trusted public service — one that embodies openness, inclusion, and accountability.*
+
+
+# Chapter 3: The GovBot Architecture – Metabots, CBots & Collections
+
+---
+
+## 3.1 Architectural Philosophy: Modularity and Interoperability
+
+The GovBot architecture is inspired by **federalism**:  
+a *central government* (**Metabot**) working with *state governments* (**CBots**) under a *common constitution* (**Collections and Standards**).
+
+This **loosely coupled, modular** approach ensures that:
+
+- **Autonomy:** MDAs can innovate independently on their CBots without breaking the central system.  
+- **Scalability:** New services are added by creating new CBots, not by bloating a single monolith.  
+- **Fault Isolation:** A bug in one CBot does not bring down the entire GovBot service.  
+- **Specialisation:** Each agency focuses on perfecting its own domain-specific knowledge and conversation flows.
+
+This architecture aligns with the **GovStack Building Block methodology**, treating GovBot itself as a **horizontal, reusable component** that can orchestrate interactions across other DPI components.
+
+---
+
+## 3.2 The Metabot (GovBot): The Central Orchestrator and Public Face
+
+The **Metabot** serves as the single point of entry for citizens and the main “face” of the service.  
+It acts as the orchestrator and traffic controller of all interactions within the ecosystem.
+
+### 🔧 Primary Functions
+
+- **Intent Classification & Routing:**  
+  Performs initial analysis of user queries to determine broad topics (e.g., *health*, *business*, *immigration*) and routes conversations to the appropriate specialised CBots.
+
+- **General Knowledge & Fallback:**  
+  Handles generic queries about government structure, operating hours, and news. Serves as a fallback when no specific CBot is identified.
+
+- **Consistent User Experience (UX):**  
+  Maintains a uniform tone of voice, branding, and interaction patterns across all channels.
+
+- **Channel Management:**  
+  Orchestrates multi-channel delivery (web, USSD, WhatsApp, voice) while maintaining conversation context.
+
+### ⚙️ Technical Characteristics
+
+- Lightweight NLP for broad intent classification  
+- Minimal domain-specific knowledge to avoid duplication  
+- Robust fallback mechanisms for unrecognised queries  
+- Session management across multiple interaction channels
+
+---
+
+## 3.3 CBots: Specialised Agency Assistants
+
+Each **CBot (Child Bot)** is a dedicated conversational AI for a specific **ministry, department, or agency (MDA)**.
+
+### 🏛️ Examples
+
+- **BRSBot** – Business Registration Service  
+- **ODPCBot** – Office of the Data Protection Commissioner  
+- **ImmigrationBot** – Department of Immigration Services  
+- **HealthBot** – Ministry of Health  
+
+---
+
+### 🧠 Each CBot Contains
+
+#### **Specialised NLP Components**
+
+- **Domain-Specific Intent Recognition:** Fine-tuned to understand jargon and intent types within its specific domain.  
+- **Entity Extraction:** Customised to identify entities relevant to the agency’s services.  
+- **Context Management:** Maintains conversation context for multi-turn dialogues within the domain.
+
+#### **Conversation Management**
+
+- **Agency-Specific Dialogue Flows:**  
+  Detailed conversation trees for provided services (e.g., step-by-step company registration).  
+- **Escalation Protocols:**  
+  Clear pathways for handing complex cases to human agents within the MDA.  
+- **Service Integration Logic:**  
+  Rules and APIs for connecting to the MDA’s backend systems.
+
+#### **Administrative Interface**
+
+- **Content Management Dashboard:**  
+  Enables non-technical MDA staff to update FAQs, modify answers, and manage the knowledge base.  
+- **Analytics View:**  
+  Provides agency-specific insights into query volumes, common issues, and user satisfaction.  
+- **Testing Environment:**  
+  Sandbox for trying new conversation flows before deployment.
+
+---
+
+### ✅ Benefits of the CBot Approach
+
+- **Domain Expertise:** Each CBot becomes highly knowledgeable in its area.  
+- **Independent Development:** MDAs can deploy updates without cross-agency coordination.  
+- **Focused Improvement:** Analytics and feedback are specific to each agency’s domain.  
+- **Progressive Enhancement:** New features can be piloted on individual CBots before full rollout.
+
+---
+
+## 3.4 Collections: The Centralised Knowledge Fabric with RAG
+
+**Collections** form the cornerstone of accuracy and trust in the GovBot ecosystem.  
+They are a **centralised, vector-based knowledge store** that all bots query using **Retrieval-Augmented Generation (RAG)**.
+
+---
+
+### 🧩 The RAG Process in Detail
+
+#### **1. Ingestion Phase**
+***Official Documents → Text Extraction → Chunking → Vectorisation → Vector Database***
+
+- **Source Materials:** PDFs, web pages, FAQs, and policy documents from all MDAs.  
+- **Text Processing:** Clean extraction from multiple document formats.  
+- **Intelligent Chunking:** Content broken into meaningful 200–500-word segments while preserving context.
+
+#### **2. Vectorisation**
+- **Embedding Models:** Multilingual models (e.g., `all-MiniLM-L6-v2`, `multilingual-e5`) convert text into numerical representations.  
+- **Metadata Enrichment:** Each chunk tagged with source MDA, publication date, document type, and relevance criteria.  
+- **Indexing:** Search-optimised indices stored in vector databases such as **Chroma**, **Weaviate**, or **Pinecone**.
+
+#### **3. Retrieval Process**
+***User Query → Query Vectorisation → Similarity Search → Relevant Chunks Retrieval***
+
+- **Semantic Search:** Finds text chunks whose vectors are most similar to the query vector.  
+- **Hybrid Search:** Combines semantic and keyword search for improved accuracy.  
+- **Relevance Scoring:** Ranks results by similarity score and metadata relevance.
+
+#### **4. Augmentation and Generation**
+Relevant Chunks + User Query → LLM Prompt → Verified Response + Citations
+
+- **Context-Aware Prompting:** Retrieved chunks provided as context to the LLM.  
+- **Instruction Tuning:** Model instructed to respond *only* based on provided context.  
+- **Citation Generation:** Source references automatically included in responses.
+
+#### **5. Response Delivery**
+- **Traceable Answers:** Each response includes citations (e.g., “According to Ministry of Health guidelines dated 15/03/2024…”).  
+- **Confidence Scoring:** Indicates confidence level based on source quality and relevance.  
+- **Fallback Handling:** Graceful degradation when high-quality sources are unavailable.
+
+---
+
+### 🏆 Benefits of the RAG Approach
+
+- **Accuracy:** Responses grounded in verified official documents.  
+- **Transparency:** Citizens can verify information via citations.  
+- **Maintainability:** Updates occur by modifying source docs — no retraining required.  
+- **Reduced Hallucinations:** LLM outputs are fact-anchored.  
+- **Multi-Language Support:** One knowledge base serves queries in multiple languages.
+
+---
+
+## 3.5 Data Flows and Integration Patterns
+
+### 🏗️ System Architecture Overview
+
+
