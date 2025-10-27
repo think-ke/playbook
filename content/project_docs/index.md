@@ -1,23 +1,25 @@
 # The GovBot Playbook: A Guide to Building Conversational AI for Public Service
 
-Welcome to the **GovBot Playbook**.  
+Welcome to the **GovBot Playbook**.
+
 This living document is your practical guide to planning, building, and scaling an AI-powered conversational assistant for your government.  
 
 Whether you are:  
 - A **citizen** curious about how your government is innovating,  
 - A **public official** looking to improve service delivery, or  
-- A **technologist** tasked with implementation —  
+- A **AI engineet** tasked with implementation —  
 
-this playbook is for you.
+***this playbook is for you.***
 
 ---
 
-## 🌍 The Vision of GovBot
+## The Vision of GovBot
 
-Imagine a single, friendly, and intelligent point of contact for all government services — accessible by **voice and text**, in your **local language**, from a **smartphone or even a feature phone**.  
+Imagine a single, friendly, and intelligent point of contact for all government services — accessible by **voice and text**, in your **local language**, from a **smartphone**.  
 
 This is the vision of **GovBot**.  
-It’s not just a chatbot; it’s a new layer of **Digital Public Infrastructure (DPI)** designed to make government services simpler, more accessible, and more human-centric.
+
+***It’s not just a chatbot; it’s a new layer of **Digital Public Infrastructure (DPI)** designed to make government services simpler, more accessible, and more human-centric.***
 
 Originally developed in **Kenya through the GovStack initiative**, this playbook captures the lessons, blueprints, and strategies to help you replicate this success.  
 
@@ -25,7 +27,7 @@ Originally developed in **Kenya through the GovStack initiative**, this playbook
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 ### **Chapter 1: The Vision – Why GovBot?**
 - The Problem We're Solving  
@@ -69,4 +71,4 @@ Originally developed in **Kenya through the GovStack initiative**, this playbook
 
 ---
 
-*This playbook is a living document — designed to evolve with every iteration of GovBot deployments across the KENYA.*
+*This playbook is a living document — designed to evolve with every iteration of GovBot deployments across the Kenya.*
