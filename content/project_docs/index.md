@@ -7,7 +7,7 @@ This living document is your practical guide to planning, building, and scaling 
 Whether you are:  
 - A **citizen** curious about how your government is innovating,  
 - A **public official** looking to improve service delivery, or  
-- A **AI engineer** tasked with implementation —  
+- An **AI engineer** tasked with implementation —  
 
 ***this playbook is for you.***
 
