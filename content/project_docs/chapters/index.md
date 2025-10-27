@@ -66,16 +66,16 @@ GovBot is built with **fairness, accountability, and transparency** at its core 
 
 Investing in GovBot yields tangible, measurable benefits:
 
-- **⚡ Operational Efficiency:**  
+- **Operational Efficiency:**  
   The Kenyan pilot demonstrated an estimated **40% reduction** in call centre volume for routine queries, allowing staff to focus on higher-value tasks.
 
-- **. Increased Service Uptake:**  
+- **Increased Service Uptake:**  
   By simplifying access and communication, GovBot increases the **utilisation** of digital public services.
 
-- **. Enhanced Trust:**  
+- **Enhanced Trust:**  
   A transparent, reliable, and helpful interface builds **public confidence** in the government’s digital transformation.
 
-- **. Data-Driven Insights:**  
+- **Data-Driven Insights:**  
   Aggregated and anonymised data from user interactions provides **actionable insights** into citizen needs — revealing where services are confusing or inadequate.
 
 ---
