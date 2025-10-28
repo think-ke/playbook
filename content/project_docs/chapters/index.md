@@ -27,8 +27,8 @@ It acts not as another siloed application, but as a **horizontal layer** across 
   > “Ninahitajika nini ili kufanyia upya leseni yangu ya udereva?”  
   > (“What do I need to renew my driver’s licence?”)  
   >  
-  > “Ninaripoti vipi bomba lililoziba katika eneo langu?”  
-  > (“How do I report a blocked drain?”)
+  > “Ninaweza repoti vipi uvujaji wa data kwa ODPC nchini Kenya”  
+  > (“How do I report a data leak to ODPC nchini Kenya?”)
 
 - **Inclusion by Design:**  
   With built-in support for multiple languages and voice-based interaction, GovBot meets citizens where they are — on the devices they already use.
