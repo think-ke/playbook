@@ -274,8 +274,133 @@ Collections form the cornerstone of accuracy and trust in the GovBot ecosystem. 
 
 ### **The RAG Process in Detail**
 
-#### **1. Ingestion Phase**
-**Source Materials:** PDFs, web pages, FAQs, policy documents from all MDAs.  
-**Text Processing:** Extraction of clean text from various document formats.  
-**Intelligent Chunking:** Breaking content into meaningful segments (200–500 words) while preserving context.
+#### 1. Ingestion Phase
+Official Documents → Text Extraction → Chunking → Vectorisation → Vector Database
 
+pgsql
+Copy code
+- **Source Materials:** PDFs, web pages, FAQs, policy documents from all MDAs
+- **Text Processing:** Extraction of clean text from various document formats
+- **Intelligent Chunking:** Breaking content into meaningful segments (typically 200–500 words) while preserving context
+
+#### 2. Vectorisation
+- **Embedding Models:** Using multilingual models (e.g., `all-MiniLM-L6-v2`, `multilingual-e5`) to convert text into numerical representations
+- **Metadata Enrichment:** Tagging chunks with source MDA, publication date, document type, and relevance criteria
+- **Indexing:** Creating search-optimised indices in the vector database (e.g., Chroma)
+
+#### 3. Retrieval Process
+User Query → Query Vectorisation → Similarity Search → Relevant Chunks Retrieval
+
+pgsql
+Copy code
+- **Semantic Search:** Finding text chunks whose vectors are most similar to the query vector
+- **Hybrid Search:** Combining semantic search with keyword matching for improved accuracy
+- **Relevance Scoring:** Ranking results by similarity score and metadata relevance
+
+#### 4. Augmentation and Generation
+Relevant Chunks + User Query → LLM Prompt → Verified Response + Citations
+
+markdown
+Copy code
+- **Context-Aware Prompting:** Feeding retrieved chunks as context to the Large Language Model (LLM)
+- **Instruction Tuning:** Explicitly instructing the LLM to base responses only on provided context
+- **Citation Generation:** Automatically including source references in responses
+
+#### 5. Response Delivery
+- **Traceable Answers:** Each response includes source citations
+- **Confidence Scoring**
+- **Fallback Handling:** Graceful degradation when high-quality sources aren't available
+
+#### 6. Suggested Queries
+- Additional follow-up questions added at the end of the response
+
+### **Benefits of the RAG Approach**
+- **Accuracy:** Responses grounded in verified official documents
+- **Transparency:** Citizens can verify information through provided citations
+- **Maintainability:** Knowledge updates happen by modifying source documents, not retraining models
+- **Reduced Hallucinations:** LLMs generate responses based on factual sources rather than internal knowledge
+- **Multi-language Support:** Same knowledge base can serve queries in different languages
+
+---
+
+## 3.5 Data Flows and Integration Patterns
+
+### **System Architecture Overview: Key Integration Points**
+
+#### 1. **User to Metabot Communication**
+- **Multi-channel Input:** Text via web/chat apps, voice via STT
+- **Session Management:** Maintaining conversation context across multiple turns
+- **User Authentication:** Optional identity verification for personalised services
+
+#### 2. **Metabot to CBot Routing**
+- **Intent Classification:** Determining which CBot should handle the query
+- **Context Passing:** Transferring relevant conversation history to the specialised CBot
+- **Fallback Handling:** When no CBot matches or multiple CBots are potential candidates
+
+#### 3. **CBot to Collections Querying**
+- **Query Formulation:** Converting user intent into effective search queries
+- **Result Processing:** Evaluating and ranking retrieved information
+- **Response Generation:** Creating natural, helpful responses based on source material
+
+#### 4. **CBot to Building Block Integration**
+- **Information Mediator:** Secure data fetching from MDA backend systems
+- **Identity BB:** User authentication and personalised service delivery
+- **Payment BB:** Transaction processing within conversation flows
+- **Workflow BB:** Status checks and process initiation
+
+### **Data Security and Privacy**
+- **End-to-End Encryption:** TLS 1.3+
+- **Minimal Data Retention:** Conversations anonymised after session completion
+- **Access Controls:** Role-based access to admin interfaces and sensitive data
+- **Audit Logging:** Comprehensive logging for security monitoring and compliance
+- **Data Residency:** Adherence to national data protection laws and sovereignty requirements
+
+### **Performance Considerations**
+- **Response Time Targets:**  
+  - `< 7 seconds` for text queries  
+  - `< 12 seconds` for voice interactions
+- **Scalability Architecture:** Horizontal scaling of CBots based on demand patterns
+- **Caching Strategy:** Intelligent caching of frequent queries and responses
+- **Load Balancing:** Distribution of requests across available CBot instances
+- **Monitoring:** Real-time performance metrics and alerting for service degradation
+
+---
+
+# Chapter 4: The Human-Centred Design (HCD) Process
+
+## 4.1 Phase 1: Discover — Immersive Research and Stakeholder Mapping
+
+This phase was about building **empathy and understanding the landscape**.
+
+- **Stakeholder Workshops:** Facilitate sessions with officials from pilot MDAs to map workflows, pain points, and common queries
+- **Citizen Immersion:** Engage through focus groups and contextual inquiry, paying attention to rural populations, the elderly, persons with disabilities, and non-native speakers
+- **Competitive and Comparative Analysis:** Review government helplines, websites, and private-sector chatbots to identify best and poor practices
+
+---
+
+## 4.2 Phase 2: Define — Synthesising Insights into Personas and Journey Maps
+
+Convert raw research into actionable design tools.
+
+- **User Personas:** Create 3–5 profiles representing key user segments  
+  *Example: “Amina, a 45-year-old market trader in Mombasa who prefers Kiswahili.”*
+- **As-Is User Journey Maps:** Chart current experience and highlight pain points
+- **To-Be Journey Maps:** Redesign ideal journeys with GovBot to eliminate pain points
+
+---
+
+## 4.3 Phase 3: Design & Prototype — Crafting Conversation Flows and Interfaces
+
+- **Conversation Scripting:** Detailed dialogue flows, greetings, follow-ups, error handling, and escalation to human agents
+- **Prototype Development:** Low-fidelity interactive prototypes with human simulation
+- **UI/UX Design for Channels:** Clean and accessible interfaces aligned with government branding guidelines
+
+---
+
+## 4.4 Phase 4: Validate — Usability Testing and Iterative Refinement
+
+- **Usability Testing Sessions:** Participants attempt tasks (e.g., “Find how to register for a film license”)
+- **A/B Testing:** When undecided between design alternatives, test both with real users
+- **Iterate and Refine:** Improve based on feedback in continuous design-test cycles
+
+---
