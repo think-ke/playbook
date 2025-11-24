@@ -403,7 +403,7 @@ Convert raw research into actionable design tools.
 - **A/B Testing:** When undecided between design alternatives, test both with real users
 - **Iterate and Refine:** Improve based on feedback in continuous design-test cycles
 
----
+
 # **Chapter 5: Technical Implementation & Building Blocks**
 
 ---
