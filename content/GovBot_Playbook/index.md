@@ -834,7 +834,8 @@ A structured, multi-tiered capacity building programme ensures that government o
 
 ## **8.1 Overview**
 
-A cornerstone of GovBot’s design philosophy is **transparency, reusability, and open collaboration**.  
+A cornerstone of GovBot’s design philosophy is **transparency, reusability, and open collaboration**.
+
 To support replication, localisation, and continuous improvement by other governments and technical partners, the **source code** and **documentation** has been made publicly accessible through open repositories.
 
 Two key repositories make up this open framework:
@@ -843,6 +844,7 @@ Two key repositories make up this open framework:
 - **Documentation Library (Google Drive):** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
 
 This ensures that future implementers — such as the Government of Rwanda or other Digital Public Infrastructure (DPI) programmes — can build upon GovBot’s foundations without starting from scratch.  
+
 Both repositories are structured for clarity, enabling contributors, developers, and policymakers to find, understand, and extend the system efficiently.
 
 ---
