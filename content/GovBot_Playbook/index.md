@@ -855,7 +855,7 @@ Both repositories are structured for clarity, enabling contributors, developers,
 
 ### **Purpose**
 
-The GovBot source code repository is a complete, modular implementation of a **Government Conversational AI platform**, aligned with the **GovStack** interoperability framework. 
+The GovBot source code repository is a complete, modular implementation of a **Government Conversational AI platform**, aligned with the **GovStack** interoperability framework.
 
 It includes all essential components for API integration, NLP processing, analytics, and DevOps deployment.
 
@@ -955,7 +955,8 @@ This structure ensures that both the strategic foundations and the continuous im
 
 ### **8.3.1 Project Docs**
 
-The **Project Docs** directory contains all foundational and governance-related materials that shaped GovBot’s inception and alignment with **Digital Public Infrastructure (DPI)** and **Digital Public Goods (DPG)** standards.  
+The **Project Docs** directory contains all foundational and governance-related materials that shaped GovBot’s inception and alignment with **Digital Public Infrastructure (DPI)** and **Digital Public Goods (DPG)** standards.
+
 These documents ensure ethical compliance, data protection, and institutional sustainability from day one.
 
 #### **Folder Structure**
@@ -970,7 +971,8 @@ These documents ensure ethical compliance, data protection, and institutional su
 | **Contracts / WPK Instructions/** | Contractual and operational materials including work package (WPK) instructions, memoranda of understanding (MoUs), and implementation agreements. |
 
 #### **Purpose**
-The **Project Docs** directory defines the **governance, ethical, and operational foundation** of GovBot.  
+The **Project Docs** directory defines the **governance, ethical, and operational foundation** of GovBot.
+
 It ensures:
 - Regulatory alignment with national and international data protection standards  
 - Documentation of AI transparency and fairness practices  
@@ -981,7 +983,8 @@ It ensures:
 
 ### **8.3.2 Sprint Docs**
 
-The **Sprint Docs** directory captures GovBot’s iterative and agile development process — from design sprints and technical architecture updates to training activities and regional collaborations.  
+The **Sprint Docs** directory captures GovBot’s iterative and agile development process — from design sprints and technical architecture updates to training activities and regional collaborations.
+
 It documents continuous learning and provides real-time insight into how the platform evolves.
 
 #### **Folder Structure**
@@ -1010,7 +1013,8 @@ It documents continuous learning and provides real-time insight into how the pla
 | **Knowledge Base & FAQs/** | **Sprints 15-16**: Guides, quick references, troubleshooting manuals, and onboarding documentation for administrators and developers. |
 
 #### **Purpose**
-The **Sprint Docs** directory functions as GovBot’s **living delivery record**, maintaining visibility and continuity across the agile workflow.  
+The **Sprint Docs** directory functions as GovBot’s **living delivery record**, maintaining visibility and continuity across the agile workflow.
+
 It provides:
 - Full traceability of technical and governance iterations  
 - A knowledge base for new team members and external reviewers  
@@ -1041,7 +1045,8 @@ All contributors are recognised within the **THiNK Community of Practice (CoP)**
 
 ## **8.5 Integration with Human-Centred Design**
 
-Both the codebase and documentation reflect the **Human-Centred Design (HCD)** methodology underpinning GovBot.  
+Both the codebase and documentation reflect the **Human-Centred Design (HCD)** methodology underpinning GovBot.
+
 Each iteration and repository update follows the principles of:
 
 - **Transparency:** Every decision and model update is documented.  
@@ -1052,13 +1057,15 @@ Each iteration and repository update follows the principles of:
 ---
 
 ### **Outcome**
+
 Together, the GitHub and Drive repositories form a **living knowledge system** — enabling any government, research institution, or civic technology community to deploy, adapt, and expand GovBot as part of their national digital transformation journey.
 
 ---
 
 > **Repositories Summary**
 >
-> - **Source Code:** [GovBot Prototype on GitHub](https://github.com/think-ke/GovBot-Prototype)  
+> - **Source Code:** [GovBot Prototype on GitHub](https://github.com/think-ke/GovBot-Prototype)
+ 
 > - **Documentation Library:** [GovBot Documentation Drive](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
 
 ---
