@@ -982,18 +982,28 @@ It documents continuous learning and provides real-time insight into how the pla
 
 #### **Folder Structure**
 
-| **Folder / File** | **Description** |
-|--------------------|-----------------|
-| **Technical Architecture/** | Architecture updates, API specifications, and infrastructure blueprints reflecting each sprint cycle’s enhancements. |
-| **Design & Development/** | Human-Centred Design artefacts: user journey maps, wireframes, prototype iterations, and design sprint outputs. |
-| **Governance & Compliance/** | Updated compliance trackers, governance templates, and audit documentation reflecting ongoing policy alignment. |
-| **Training & Workshops/** | Materials from capacity-building sessions with ministries, MDAs, and developers — including agendas, presentations, and outcomes. |
-| **Model Cards/** | Standardised documentation describing AI models, their intended use, performance metrics, retraining logs, and bias evaluations. |
-| **Risk Registers & Audits/** | Records of risks identified during development, mitigation strategies, and internal/external audit results. |
-| **User Stories & Use Cases/** | Real-world scenarios and conversational examples tested during pilot deployments for service validation. |
-| **Community Engagements/** | Summaries of NLP community collaborations (e.g., IndabaX, Mbaza, Uganda AI Network), including peer-learning outcomes. |
-| **Scaling & Sustainability Plans/** | Strategic documents outlining pathways for scaling GovBot nationally and regionally, with funding and partnership frameworks. |
-| **Knowledge Base & FAQs/** | Guides, quick references, troubleshooting manuals, and onboarding documentation for administrators and developers. |
+*Folder / File** | **Sprint / Description** |
+|------------------|-------------------------|
+| **Documentation & Foundation Setup/** | **Sprint 0**: Core project documentation, repository setup, initial guidelines, and foundational frameworks. |
+| **Kickoff & Agile Setup/** | **Sprints 1-2**: Agile processes, team onboarding, sprint planning artifacts, and project kickoff notes. |
+| **Architecture & Model Initiation/** | **Sprints 3-4**: System architecture diagrams, data flow, initial AI/ML model prototypes, and design considerations. |
+| **Technical Architecture/** | **Sprints 3-5**: Architecture updates, API specifications, and infrastructure blueprints supporting model initiation and MVP build. |
+| **Design & Development/** | **Sprints 3-5**: User journey maps, wireframes, prototypes, and design sprint outputs used during model initiation and MVP development. |
+| **MVP Build (Text, Voice & Integration)** | **Sprint 5**: Development of minimum viable product including text & voice interfaces, core functionalities, and integration testing. |
+| **Beta Demo Launch/** | **Sprint 6**: Beta release documentation, demo scripts, feedback collection, and sprint retrospectives. |
+| **Alpha Testing & GovStack Integration/** | **Sprints 7-8**: Alpha testing reports, GovStack API integration guides, bug tracking, and iteration updates. |
+| **Governance & Compliance/** | **Sprints 7-10**: Compliance trackers, audit documentation, and policy alignment records during testing, integration, and governance readiness. |
+| **Community & Governance Readiness/** | **Sprints 9-10**: Governance documentation, compliance checklists, stakeholder engagement outputs, and community preparation materials. |
+| **Training & Workshops/** | **Sprints 9-12**: Materials from capacity-building sessions with ministries, MDAs, and developers, used during community engagement and support readiness. |
+| **Public Testing & Support Readiness/** | **Sprints 11-12**: User testing results, support manuals, admin onboarding documentation, and user feedback analysis. |
+| **Model Cards/** | **Sprints 11-12**: Standardized AI model documentation including intended use, performance metrics, retraining logs, and bias evaluations for public testing. |
+| **Risk Registers & Audits/** | **Sprints 5-12**: Records of identified risks, mitigation strategies, and audit results during MVP, testing, and support phases. |
+| **User Stories & Use Cases/** | **Sprints 5-12**: Real-world scenarios and conversational examples from pilot deployments used for validation, testing, and public readiness. |
+| **Community Engagements/** | **Sprints 9-12**: NLP community collaborations, peer-learning outcomes, and event summaries during governance and public readiness. |
+| **Soft Launch/** | **Sprints 13-14**: Launch planning, release notes, communication materials, and early user metrics. |
+| **Scaling & Sustainability Plans/** | **Sprints 13-14**: Strategic documents outlining pathways for scaling GovBot nationally and regionally, with funding and partnership frameworks. |
+| **Stabilization, Handover & Final Reporting/** | **Sprints 15-16**: Final bug fixes, system stabilization, handover guides, final reporting, and lessons learned. |
+| **Knowledge Base & FAQs/** | **Sprints 15-16**: Guides, quick references, troubleshooting manuals, and onboarding documentation for administrators and developers. |
 
 #### **Purpose**
 The **Sprint Docs** directory functions as GovBot’s **living delivery record**, maintaining visibility and continuity across the agile workflow.  
