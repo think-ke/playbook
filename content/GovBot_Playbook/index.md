@@ -839,8 +839,8 @@ To support replication, localisation, and continuous improvement by other govern
 
 Two key repositories make up this open framework:
 
-- 🧠 **Source Code (GitHub):** [https://github.com/think-ke/GovBot-Prototype](https://github.com/think-ke/GovBot-Prototype)  
-- 📘 **Documentation Library (Google Drive):** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
+- **Source Code (GitHub):** [https://github.com/think-ke/GovBot-Prototype](https://github.com/think-ke/GovBot-Prototype)  
+- **Documentation Library (Google Drive):** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
 
 This ensures that future implementers — such as the Government of Rwanda or other Digital Public Infrastructure (DPI) programmes — can build upon GovBot’s foundations without starting from scratch.  
 Both repositories are structured for clarity, enabling contributors, developers, and policymakers to find, understand, and extend the system efficiently.
