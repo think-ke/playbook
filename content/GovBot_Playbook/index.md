@@ -855,7 +855,8 @@ Both repositories are structured for clarity, enabling contributors, developers,
 
 ### **Purpose**
 
-The GovBot source code repository is a complete, modular implementation of a **Government Conversational AI platform**, aligned with the **GovStack** interoperability framework.  
+The GovBot source code repository is a complete, modular implementation of a **Government Conversational AI platform**, aligned with the **GovStack** interoperability framework. 
+
 It includes all essential components for API integration, NLP processing, analytics, and DevOps deployment.
 
 ### **Repository Contents**
@@ -945,6 +946,7 @@ uvicorn app.main:app --reload
 **Documentation Drive:** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
 
 The **GovBot Documentation Library** provides a comprehensive record of the project’s lifecycle — from conceptualisation and ethical governance to iterative sprint execution and post-deployment evaluations.  
+
 It is organised into **two main directories**: **Project Docs** and **Sprint Docs**. 
 
 This structure ensures that both the strategic foundations and the continuous improvements of GovBot are transparent and easily navigable for any government or development partner wishing to replicate the system.
