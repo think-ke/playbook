@@ -828,3 +828,108 @@ A structured, multi-tiered capacity building programme ensures that government o
 - **Mentorship Programme:** Experienced practitioners guiding new administrators  
 
 ---
+# **Chapter 8: Source Code and Documentation Repository**
+
+---
+
+## **8.1 Overview**
+
+A cornerstone of GovBot’s design philosophy is **transparency, reusability, and open collaboration**.  
+To support replication, localisation, and continuous improvement by other governments and technical partners, the complete **source code** and **documentation** have been made publicly accessible through open repositories.
+
+This ensures that future implementers — such as the Government of Tanzania or other Digital Public Infrastructure (DPI) programmes — can build upon GovBot’s foundations without starting from scratch.  
+Both repositories are structured for clarity, enabling contributors, developers, and policymakers to find, understand, and extend the system efficiently.
+
+---
+
+## **8.2 Source Code Repository**
+
+**GitHub Repository:** [https://github.com/think-ke/GovBot-Prototype](https://github.com/think-ke/GovBot-Prototype)
+
+### **Purpose**
+The GitHub repository hosts the full **GovBot prototype codebase**, including backend services, frontend modules, NLP pipelines, and integration scripts for GovStack Building Blocks.
+
+### **Repository Contents**
+
+| **Folder / Module** | **Description** |
+|----------------------|-----------------|
+| `/backend` | Core server logic, RESTful APIs, and middleware integration for GovStack Building Blocks (Identity, Information Mediator, Registry). |
+| `/frontend` | Web-based user interface components and chatbot UI elements for text and voice interactions. |
+| `/nlp` | NLP stack including intent classification, entity extraction, and RAG (Retrieval-Augmented Generation) modules. |
+| `/stt_tts` | Speech-to-Text and Text-to-Speech components customised for Swahili and English. |
+| `/config` | Environment and container configuration files (Docker, Kubernetes, .env templates). |
+| `/scripts` | Automation scripts for deployment, data validation, and analytics setup. |
+| `/docs` | Technical design references, model cards, and architectural diagrams. |
+
+### **Key Features**
+- Open-source under a permissive licence (Digital Public Good compliance)  
+- Modular architecture allowing governments to add or replace CBots (child bots)  
+- Support for multilingual deployments (Kiswahili, English, with extension capability)  
+- CI/CD pipeline integration for agile deployments  
+- API-ready for integration with GovStack and national service registries  
+
+---
+
+## **8.3 Documentation Repository**
+
+**Documentation Drive:** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
+
+### **Purpose**
+This Google Drive repository contains comprehensive **technical and governance documentation** for GovBot. It supports government agencies, developers, and policy teams in understanding the project’s architecture, governance, compliance, and deployment process.
+
+### **Documentation Structure**
+
+| **Document / Folder** | **Description** |
+|------------------------|-----------------|
+| **/Technical_Architecture/** | Contains system diagrams, middleware logic, and API integration flows. |
+| **/Governance_&_Compliance/** | Includes the IP & Governance Framework, DPG Compliance Reports, and Eticas Responsible AI Assessment. |
+| **/Sprint_Logs/** | Detailed sprint retrospectives, progress reports, and QA results. |
+| **/Training_&_Workshops/** | Workshop materials for NLP community engagement, government onboarding, and developer capacity building. |
+| **/Model_Cards/** | Ethical model cards describing intended use, limitations, and bias mitigation strategies. |
+| **/User_Stories_&_Use_Cases/** | Practical examples and conversational design scenarios used during HCD phases. |
+| **/Risk_Registers_&_Audits/** | Comprehensive record of risk management and mitigation strategies. |
+
+### **Accessibility and Usage**
+- All documents are in open formats (PDF, DOCX, XLSX, Markdown) for re-use.  
+- Governments can duplicate the structure for their own chatbot documentation.  
+- Updated quarterly to reflect new features, compliance reports, and pilot results.  
+- Serves as a **single source of truth** for implementers seeking alignment with GovStack and DPI frameworks.  
+
+---
+
+## **8.4 Contribution Guidelines**
+
+To maintain quality and traceability of community input, both repositories follow a defined contribution protocol:
+
+1. **Fork and Branch:** Create a new branch for each feature or improvement.  
+2. **Document Changes:** Update corresponding design documents or README files.  
+3. **Pull Request Review:** Submissions are reviewed by maintainers at **THiNK** and relevant government ICT teams.  
+4. **Merge and Publish:** Approved contributions are merged and reflected in quarterly updates.  
+
+All contributors are recognised within the **THiNK Community of Practice (CoP)** and invited to join the **Our developer network** for continued collaboration.
+
+---
+
+## **8.5 Integration with Human-Centred Design**
+
+Both the codebase and documentation reflect the **Human-Centred Design (HCD)** methodology underpinning GovBot.  
+Each iteration and repository update follows the principles of:
+
+- **Transparency:** Every decision and model update is documented.  
+- **Inclusivity:** Local languages and user feedback shape development priorities.  
+- **Co-creation:** Developers, civil servants, and citizens collaborate openly.  
+- **Scalability:** The architecture and documentation are reusable across borders.  
+
+---
+
+### **Outcome**
+Together, the GitHub and Drive repositories form a **living knowledge system** — enabling any government, research institution, or civic technology community to deploy, adapt, and expand GovBot as part of their national digital transformation journey.
+
+---
+
+> **Repositories Summary**
+>
+> - **Source Code:** [GovBot Prototype on GitHub](https://github.com/think-ke/GovBot-Prototype)  
+> - **Documentation Library:** [GovBot Documentation Drive](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
+
+---
