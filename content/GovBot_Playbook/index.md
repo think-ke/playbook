@@ -837,6 +837,11 @@ A structured, multi-tiered capacity building programme ensures that government o
 A cornerstone of GovBot’s design philosophy is **transparency, reusability, and open collaboration**.  
 To support replication, localisation, and continuous improvement by other governments and technical partners, the **source code** and **documentation** has been made publicly accessible through open repositories.
 
+Two key repositories make up this open framework:
+
+- 🧠 **Source Code (GitHub):** [https://github.com/think-ke/GovBot-Prototype](https://github.com/think-ke/GovBot-Prototype)  
+- 📘 **Documentation Library (Google Drive):** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
+
 This ensures that future implementers — such as the Government of Rwanda or other Digital Public Infrastructure (DPI) programmes — can build upon GovBot’s foundations without starting from scratch.  
 Both repositories are structured for clarity, enabling contributors, developers, and policymakers to find, understand, and extend the system efficiently.
 
@@ -847,47 +852,151 @@ Both repositories are structured for clarity, enabling contributors, developers,
 **GitHub Repository:** [https://github.com/think-ke/GovBot-Prototype](https://github.com/think-ke/GovBot-Prototype)
 
 ### **Purpose**
-The GitHub repository hosts the full **GovBot prototype codebase**, including backend services, frontend modules, NLP pipelines, and integration scripts for GovStack Building Blocks.
+
+The GovBot source code repository is a complete, modular implementation of a **Government Conversational AI platform**, aligned with the **GovStack** interoperability framework.  
+It includes all essential components for API integration, NLP processing, analytics, and DevOps deployment.
 
 ### **Repository Contents**
 
-| **Folder / Module** | **Description** |
-|----------------------|-----------------|
-| `/docker` | Core server logic, RESTful APIs, and middleware integration for GovStack Building Blocks (Identity, Information Mediator, Registry). |
-| `/agencies-admin-dashboard` | Web-based user interface components and chatbot UI elements for text and voice interactions. |
-| `/presentations` | NLP stack including intent classification, entity extraction, and RAG (Retrieval-Augmented Generation) modules. |
-| `/tests` | Speech-to-Text and Text-to-Speech components customised for Swahili and English. |
-| `/docker` | Environment and container configuration files (Docker, Kubernetes, .env templates). |
-| `/scripts` | Automation scripts for deployment, data validation, and analytics setup. |
-| `/docs` | Technical design references, model cards, and architectural diagrams. |
+| **Folder / File** | **Purpose and Description** |
+|--------------------|-----------------------------|
+| **/.chainlit/** | Configuration files and assets for the Chainlit-based conversational interface. |
+| **/agencies-admin-dashboard/** | Administrative interface for managing connected government agencies, datasets, and collections. |
+| **/alembic/** | Database migration scripts using Alembic for PostgreSQL schema updates. |
+| **/analytics/** | Analytics and telemetry services, including data collection metrics, usage reports, and dashboard integration. |
+| **/app/** | Core GovBot application logic: API endpoints, NLP orchestration, data models, and business logic. |
+| **/chainlit/** | Conversation flow configuration for the Chainlit-powered front-end experience. |
+| **/docker/** | Docker-related scripts and configuration templates for development and production environments. |
+| **/docs/** | Auto-generated API documentation and developer notes for endpoints, models, and services. |
+| **/examples/** | Example notebooks and guides demonstrating API usage, SDK integration, and chatbot workflows. |
+| **/presentations/** | Presentation slides and materials for GovBot demos, workshops, and stakeholder engagements. |
+| **/scripts/** | Utility scripts for database backup, restore, deployment, and system maintenance. |
+| **/tests/** | Comprehensive test suites validating API endpoints, NLP models, and collection data integrity. |
+| **.dockerignore** | Excludes unnecessary files from Docker image builds. |
+| **.gitignore** | Specifies files ignored by Git version control. |
+| **.python-version** | Defines the Python version for environment consistency. |
+| **README.md** | Primary documentation with setup, environment, and usage instructions. |
+| **alembic.ini** | Alembic configuration file for migration environment setup. |
+| **backup_and_clear.sh** | Script for data backup and environment cleanup before redeployment. |
+| **delivery_plan.md** | Milestone document outlining development phases, delivery targets, and implementation plan. |
+| **docker-compose.yml / .demo / .dev** | Docker Compose configurations for different deployment modes (production, demo, development). |
+| **docker_inspector.sh** | Diagnostic script for inspecting Docker container networks and IP addresses. |
+| **nginx.conf** | NGINX configuration file for API gateway, load balancing, and SSL termination. |
+| **package-lock.json** | Lock file for managing frontend or JavaScript dependencies. |
+| **pyproject.toml** | Build and dependency configuration for Python using modern packaging standards. |
+| **pytest.ini** | Test configuration file for running automated tests via Pytest. |
+| **requirements.txt / requirements.md / requirements-uv-generated.txt** | Dependency lists for environment setup using pip or UV package management. |
+| **restore_from_backup.sh** | Automated restoration of PostgreSQL databases and file backups. |
+| **shutdown_with_backup.sh** | Combined backup and shutdown script ensuring data persistence. |
+| **test_api.sqlite / test_list_documents.py** | SQLite database and test scripts for validating API responses and database queries. |
+| **uv.lock** | Dependency lockfile for UV-managed Python environments. |
+
+
+---
+
+### **Key Technologies and Frameworks**
+
+| **Layer** | **Technology Stack** |
+|------------|----------------------|
+| **Core Framework** | Python 3.11+, FastAPI |
+| **Database** | PostgreSQL with Alembic migrations |
+| **Containerisation** | Docker, Docker Compose |
+| **NLP & AI** | Groq speech-to-text service, integrated transformer models |
+| **Analytics** | Custom analytics engine under `/analytics` |
+| **Frontend / Chat Interface** | Chainlit (Python-based UI framework for conversational AI) |
+| **DevOps** | Backup and monitoring scripts with CI/CD support |
+| **Testing** | Pytest and integrated SQLite sandbox testing |
+
+---
+
+### **Environment Setup**
+
+To run GovBot locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/think-ke/GovBot-Prototype
+cd GovBot-Prototype
+
+# 2. Build Docker containers
+docker compose up --build
+
+# 3. Run the application
+uvicorn app.main:app --reload
 
 ### **Key Features**
 - Open-source under a permissive licence (Digital Public Good compliance)  
-- Modular architecture allowing governments to add or replace CBots (child bots)  
+- Modular architecture allowing governments to add or replace CBots (Common Object Bots)  
 - Support for multilingual deployments (Kiswahili, English, with extension capability)  
 - CI/CD pipeline integration for agile deployments  
 - API-ready for integration with GovStack and national service registries  
 
 ---
 
+
 ## **8.3 Documentation Repository**
 
 **Documentation Drive:** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
 
-### **Purpose**
-This Google Drive repository contains comprehensive **technical and governance documentation** for GovBot. It supports government agencies, developers, and policy teams in understanding the project’s architecture, governance, compliance, and deployment process.
+he **GovBot Documentation Library** provides a comprehensive record of the project’s lifecycle — from conceptualisation and ethical governance to iterative sprint execution and post-deployment evaluations.  
+It is organised into **two main directories**: **Project Docs** and **Sprint Docs**. This structure ensures that both the strategic foundations and the continuous improvements of GovBot are transparent and easily navigable for any government or development partner wishing to replicate the system.
 
-### **Documentation Structure**
+---
 
-| **Document / Folder** | **Description** |
-|------------------------|-----------------|
-| **/Technical_Architecture/** | Contains system diagrams, middleware logic, and API integration flows. |
-| **/Governance_&_Compliance/** | Includes the IP & Governance Framework, DPG Compliance Reports, and Eticas Responsible AI Assessment. |
-| **/Sprint_Logs/** | Detailed sprint retrospectives, progress reports, and QA results. |
-| **/Training_&_Workshops/** | Workshop materials for NLP community engagement, government onboarding, and developer capacity building. |
-| **/Model_Cards/** | Ethical model cards describing intended use, limitations, and bias mitigation strategies. |
-| **/User_Stories_&_Use_Cases/** | Practical examples and conversational design scenarios used during HCD phases. |
-| **/Risk_Registers_&_Audits/** | Comprehensive record of risk management and mitigation strategies. |
+### **8.3.1 Project Docs**
+
+The **Project Docs** directory contains all foundational and governance-related materials that shaped GovBot’s inception and alignment with **Digital Public Infrastructure (DPI)** and **Digital Public Goods (DPG)** standards.  
+These documents ensure ethical compliance, data protection, and institutional sustainability from day one.
+
+#### **Folder Structure**
+
+| **Folder / File** | **Description** |
+|--------------------|-----------------|
+| **Project Slides/** | Presentation decks used for high-level briefings with ministries, ICT authorities, and donor partners; includes technical overviews and project roadmaps. |
+| **Eticas Documents/** | Independent ethical and Responsible AI assessment reports developed by the Eticas Foundation; focus on transparency, fairness, and bias mitigation. |
+| **DPA Documentation/** | Data Protection Authority (DPA) compliance materials — Data Protection Impact Assessments (DPIAs), legal alignment reports, and data governance frameworks. |
+| **GovBot Training Data/** | NLP training datasets used to develop multilingual intent recognition, entity extraction, and speech processing models. |
+| **Draft Reports/** | Early and intermediate project reports summarising progress, pilot feedback, and stakeholder findings prior to final publication. |
+| **Contracts / WPK Instructions/** | Contractual and operational materials including work package (WPK) instructions, memoranda of understanding (MoUs), and implementation agreements. |
+
+#### **Purpose**
+The **Project Docs** directory defines the **governance, ethical, and operational foundation** of GovBot.  
+It ensures:
+- Regulatory alignment with national and international data protection standards  
+- Documentation of AI transparency and fairness practices  
+- Accessibility for auditors, reviewers, and policy stakeholders  
+- A replicable model for new GovBot deployments in other jurisdictions  
+
+---
+
+### **8.3.2 Sprint Docs**
+
+The **Sprint Docs** directory captures GovBot’s iterative and agile development process — from design sprints and technical architecture updates to training activities and regional collaborations.  
+It documents continuous learning and provides real-time insight into how the platform evolves.
+
+#### **Folder Structure**
+
+| **Folder / File** | **Description** |
+|--------------------|-----------------|
+| **Technical Architecture/** | Architecture updates, API specifications, and infrastructure blueprints reflecting each sprint cycle’s enhancements. |
+| **Design & Development/** | Human-Centred Design artefacts: user journey maps, wireframes, prototype iterations, and design sprint outputs. |
+| **Governance & Compliance/** | Updated compliance trackers, governance templates, and audit documentation reflecting ongoing policy alignment. |
+| **Training & Workshops/** | Materials from capacity-building sessions with ministries, MDAs, and developers — including agendas, presentations, and outcomes. |
+| **Model Cards/** | Standardised documentation describing AI models, their intended use, performance metrics, retraining logs, and bias evaluations. |
+| **Risk Registers & Audits/** | Records of risks identified during development, mitigation strategies, and internal/external audit results. |
+| **User Stories & Use Cases/** | Real-world scenarios and conversational examples tested during pilot deployments for service validation. |
+| **Community Engagements/** | Summaries of NLP community collaborations (e.g., IndabaX, Mbaza, Uganda AI Network), including peer-learning outcomes. |
+| **Scaling & Sustainability Plans/** | Strategic documents outlining pathways for scaling GovBot nationally and regionally, with funding and partnership frameworks. |
+| **Knowledge Base & FAQs/** | Guides, quick references, troubleshooting manuals, and onboarding documentation for administrators and developers. |
+
+#### **Purpose**
+The **Sprint Docs** directory functions as GovBot’s **living delivery record**, maintaining visibility and continuity across the agile workflow.  
+It provides:
+- Full traceability of technical and governance iterations  
+- A knowledge base for new team members and external reviewers  
+- Institutional memory supporting long-term sustainability  
+
+---
 
 ### **Accessibility and Usage**
 - All documents are in open formats (PDF, DOCX, XLSX, Markdown) for re-use.  
