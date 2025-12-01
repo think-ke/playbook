@@ -926,6 +926,9 @@ docker compose up --build
 # 3. Run the application
 uvicorn app.main:app --reload
 
+
+```
+
 ### **Key Features**
 - Open-source under a permissive licence (Digital Public Good compliance)  
 - Modular architecture allowing governments to add or replace CBots (Common Object Bots)  
@@ -933,13 +936,13 @@ uvicorn app.main:app --reload
 - CI/CD pipeline integration for agile deployments  
 - API-ready for integration with GovStack and national service registries  
 
-```
+
 
 ## **8.3 Documentation Repository**
 
 **Documentation Drive:** [https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
 
-he **GovBot Documentation Library** provides a comprehensive record of the project’s lifecycle — from conceptualisation and ethical governance to iterative sprint execution and post-deployment evaluations.  
+The **GovBot Documentation Library** provides a comprehensive record of the project’s lifecycle — from conceptualisation and ethical governance to iterative sprint execution and post-deployment evaluations.  
 It is organised into **two main directories**: **Project Docs** and **Sprint Docs**. This structure ensures that both the strategic foundations and the continuous improvements of GovBot are transparent and easily navigable for any government or development partner wishing to replicate the system.
 
 ---
