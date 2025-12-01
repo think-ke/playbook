@@ -913,6 +913,8 @@ It includes all essential components for API integration, NLP processing, analyt
 
 To run GovBot locally:
 
+
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/think-ke/GovBot-Prototype
@@ -931,8 +933,7 @@ uvicorn app.main:app --reload
 - CI/CD pipeline integration for agile deployments  
 - API-ready for integration with GovStack and national service registries  
 
----
-
+```
 
 ## **8.3 Documentation Repository**
 
