@@ -971,6 +971,7 @@ These documents ensure ethical compliance, data protection, and institutional su
 | **Contracts / WPK Instructions/** | Contractual and operational materials including work package (WPK) instructions, memoranda of understanding (MoUs), and implementation agreements. |
 
 #### **Purpose**
+
 The **Project Docs** directory defines the **governance, ethical, and operational foundation** of GovBot.
 
 It ensures:
@@ -1065,7 +1066,7 @@ Together, the GitHub and Drive repositories form a **living knowledge system** â
 > **Repositories Summary**
 >
 > - **Source Code:** [GovBot Prototype on GitHub](https://github.com/think-ke/GovBot-Prototype)
- 
+
 > - **Documentation Library:** [GovBot Documentation Drive](https://drive.google.com/drive/folders/1mQnF3jLxc-ns3p7BpAD9hphHSEfwCfTi?usp=drive_link)
 
 ---
