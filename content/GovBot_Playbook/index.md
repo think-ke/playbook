@@ -4,7 +4,7 @@ Welcome to the **GovBot Playbook**.
 
 This living document serves as an authoritative guide for the planning,development and scalable deployment of an AI-powered conversational assistant within government operations. 
 
-It is designed to suppirt:
+It is designed to support:
 - A **citizen** seeking to understand how their government is advancing digital innovation, 
 - A **public official** aiming to enhance efficiency ,accessibility and quality of public services or
 - **Technical teams and AI engineers** responsible for architecting and implementing the required systems
