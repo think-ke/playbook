@@ -6,7 +6,7 @@ This living document serves as an authoritative guide for the planning,developme
 
 It is designed to suppirt:
 - A **citizen** seeking to understand how their government is advancing digital innovation, 
-- A **public official** aiming to enhance efficiency ,accessibilit and quality of public services or
+- A **public official** aiming to enhance efficiency ,accessibility and quality of public services or
 - **Technical teams and AI engineers** responsible for architecting and implementing the required systems
 
 ***this playbook is for you.***
