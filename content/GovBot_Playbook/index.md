@@ -9,7 +9,8 @@ It is designed to support:
 - A **public official** aiming to enhance efficiency ,accessibility and quality of public services or
 - **Technical teams and AI engineers** responsible for architecting and implementing the required systems
 
-***this playbook is for you.***
+
+***This playbook is for you.***
 
 ---
 
@@ -22,6 +23,7 @@ This is the vision of **GovBot**.
 ***It’s not just a chatbot; it’s a new layer of **Digital Public Infrastructure (DPI)** designed to make government services simpler, more accessible, and more human-centric.***
 
 Originally developed in **Kenya through the GovStack initiative**, this playbook captures the lessons, blueprints, and strategies to help you replicate this success.  
+
 
 > Let’s build the future of citizen engagement — together.
 
