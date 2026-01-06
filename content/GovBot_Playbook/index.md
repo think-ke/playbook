@@ -133,7 +133,7 @@ A successful GovBot initiative requires a coalition of partners, each with a cle
 | **Stakeholder Group** | **Key Representatives** | **Primary Responsibilities** |
 |-----------------------|-------------------------|------------------------------|
 | **Lead Government Agency** | Directorate of Citizen Services (eCitizen) | Provides leadership, political sponsorship, policy alignment, and long-term ownership. |
-| **Technical Implementation Partner** |Tech Innovators Network(THiNK) An organization with expertise in AI, NLP, and agile delivery | Leads end-to-end development, integration, and deployment. |
+| **Technical Implementation Partner** |Tech Innovators Network(THiNK) - An organization with expertise in AI, NLP, and agile delivery | Leads end-to-end development, integration, and deployment. |
 | **International Development Partner** | GIZ Fairforward, GIZ DTC Kenya, GovStack, ITU | Provides funding, technical assistance, global best practices, and cross-country learning. |
 | **Pilot Ministries/Departments/Agencies (MDAs)** | High-impact service delivery MDAs (e.g., Ministry of ICT & Interior) | Co-design use cases, validate content, and champion adoption. |
 | **Regulatory Bodies** | Office of the Data Protection Commissioner (ODPC) | Ensures compliance with data privacy laws and security standards. |
